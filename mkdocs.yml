@@ -1,0 +1,85 @@
+site_name: Code Blotter
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    # - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.path
+    # - navigation.expand
+    - search.suggest
+    - search.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - toc.integrate
+    - toc.follow
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: green
+      accent: light green
+      # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+      primary: green
+      accent: light green
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      toc_depth: 3 # adjust the toc depth
+
+extra_javascript:
+  - assets/js/custom_toc.js
+
+extra_css:
+  - assets/css/custom_toc.css
+
+nav:
+  - Home: "index.md"
+  - "Knowledge Base":
+      - SharePoint:
+          - "sharepoint/index.md"
+          - "Web Parts": "sharepoint/webparts.md"
+          - "Query Parameters": "sharepoint/query-parameters.md"
+      - Markdown:
+          - "markdown/index.md"
+          - "Markdown Basics": "markdown/markdown-basics.md"
+          - "MkDocs Setup": "markdown/mkdocs-setup.md"
+      - JavaScript:
+          - "javascript/index.md"
+      - HTML:
+          - "html/index.md"
+      - CSS:
+          - "css/index.md"
+      - Microsoft:
+          - "css/index.md"
+
+copyright: © 2024 <a href="#" target="blank">Michael Droschak</a>
