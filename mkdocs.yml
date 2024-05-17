@@ -32,6 +32,11 @@ theme:
       accent: light green
 
 markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: httpCall
+          class: http
+          format: !!python/name:custom_fences.httpCall
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -43,7 +48,6 @@ markdown_extensions:
   - footnotes
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
       combine_header_slug: true
@@ -54,25 +58,25 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
-      toc_depth: 3 # adjust the toc depth
+      toc_depth: 3
 
 extra_javascript:
   - assets/js/custom_toc.js
+  - assets/js/custom_fences.js
 
 extra_css:
   - assets/css/custom_toc.css
+  - assets/css/http-admonitions.css
+  - assets/css/custom_fences.css
 
 nav:
   - Home: "index.md"
-  - "Knowledge Base":
-      - SharePoint:
-          - "sharepoint/index.md"
-          - "Web Parts": "sharepoint/webparts.md"
-          - "Query Parameters": "sharepoint/query-parameters.md"
+  - Knowledge Base:
       - Markdown:
           - "markdown/index.md"
           - "Markdown Basics": "markdown/markdown-basics.md"
           - "MkDocs Setup": "markdown/mkdocs-setup.md"
+          - "Custom Fences": "markdown/custom-fences.md"
       - JavaScript:
           - "javascript/index.md"
       - HTML:
@@ -80,6 +84,15 @@ nav:
       - CSS:
           - "css/index.md"
       - Microsoft:
-          - "css/index.md"
+          - "microsoft/index.md"
+          - SharePoint:
+              - "microsoft/sharepoint/index.md"
+              - "Web Parts": "microsoft/sharepoint/webparts.md"
+              - "Query Parameters": "microsoft/sharepoint/query-parameters.md"
+          - Power Automate:
+              - "microsoft/power-automate/index.md"
+              - "Expressions": "microsoft/power-automate/expressions.md"
+              - "Rest API": "microsoft/power-automate/rest-api.md"
+  - How To: "how-to/index.md"
 
-copyright: © 2024 <a href="#" target="blank">Michael Droschak</a>
+copyright: © 2024 <a href="#" target="blank">DRoPack</a>
