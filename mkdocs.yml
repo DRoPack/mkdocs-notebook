@@ -3,11 +3,9 @@ theme:
   name: material
   features:
     - navigation.tabs
-    # - navigation.sections
     - navigation.indexes
     - navigation.top
     - navigation.path
-    # - navigation.expand
     - search.suggest
     - search.tabs.link
     - content.code.annotation

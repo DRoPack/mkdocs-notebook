@@ -23,7 +23,7 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
     For Windows install of Python be sure to check the box to add Python to your **PATH**<br>
     (It's normally off by default)
 
-    ![Python Installer](../assets/img/markdown/win-py-install.png)
+![Python Installer](../assets/img/markdown/win-py-install.png)
 
 ## Installing MkDocs
 
@@ -53,17 +53,15 @@ cd my-project
 ```
 
 !!! tip
-
     In the example above the new `MkDocs` project was called 'my-project' but any name can be used for the new project name.
 
 ## Python Virtual Environment
 
-`Python 3` has a [built-in virtual environment][python-virtual-env] that will isolate project packages from other projects on your system. It's recommended to **start the virtual environment each time** you open a `Python` project to work on it. The virtual environment will cease each time you close a project from your IDE.
+`Python 3` has a [built-in virtual environment][python-virtual-env] that will isolate project packages from other projects on your system. It's recommended to **activate the virtual environment each time** you open a `Python` project to work on it. The virtual environment will cease each time you close the shell or IDE from which you activated from.
 
 [python-virtual-env]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
 
 !!! note
-
     The command lines below are execute while inside your `Python` project directory
 
 === ":fontawesome-brands-windows: **Windows**"
@@ -72,7 +70,7 @@ cd my-project
     # Make the virtual environment
     python -m venv venv
 
-    # Active the virtual environment
+    # Activate the virtual environment
     venv\Scripts\activate.bat
     ```
 
@@ -82,9 +80,12 @@ cd my-project
     # Make the virtual environment
     python3 -m venv venv
 
-    # Active the virtual environment
+    # Activate the virtual environment
     source venv/bin/activate
     ```
+
+    !!! note
+        Reactivate an existing virtual environment by following the same instructions to activate.  There's no need to create a new virtual environment.
 
 ## Project layout
 
