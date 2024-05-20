@@ -72,9 +72,9 @@ nav:
   - Knowledge Base:
       - Markdown:
           - "markdown/index.md"
-          - "Markdown Basics": "markdown/markdown-basics.md"
-          - "MkDocs Setup": "markdown/mkdocs-setup.md"
-          - "Custom Fences": "markdown/custom-fences.md"
+          - Markdown Basics: "markdown/markdown-basics.md"
+          - MkDocs Setup: "markdown/mkdocs-setup.md"
+          - Custom Fences: "markdown/custom-fences.md"
       - JavaScript:
           - "javascript/index.md"
       - HTML:
@@ -85,12 +85,12 @@ nav:
           - "microsoft/index.md"
           - SharePoint:
               - "microsoft/sharepoint/index.md"
-              - "Web Parts": "microsoft/sharepoint/webparts.md"
-              - "Query Parameters": "microsoft/sharepoint/query-parameters.md"
+              - Web Parts: "microsoft/sharepoint/webparts.md"
+              - Query Parameters: "microsoft/sharepoint/query-parameters.md"
           - Power Automate:
               - "microsoft/power-automate/index.md"
-              - "Expressions": "microsoft/power-automate/expressions.md"
-              - "Rest API": "microsoft/power-automate/rest-api.md"
+              - Expressions: "microsoft/power-automate/expressions.md"
+              - Rest API: "microsoft/power-automate/rest-api.md"
   - How To: "how-to/index.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
