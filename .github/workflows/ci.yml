@@ -25,5 +25,9 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - run: pip install mkdocs-material pymdown-extensions
+      - name: Run MkDocs
+          run: mkdocs gh-deploy --force
+          env:
+            PYTHONPATH: ${{ github.workspace }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
