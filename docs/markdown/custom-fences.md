@@ -11,7 +11,7 @@ An overview of the custom fences created for documenting HTTP calls in `Material
         Method= GET
 
         Path
-        __blotter.sharePoint/api/GetNames/{name}
+        _blotter.sharePoint/api/GetNames/{name}
 
         Header
         {
@@ -33,7 +33,7 @@ An overview of the custom fences created for documenting HTTP calls in `Material
     method=POST
 
     path
-    __api/web/lists/post-example
+    _api/web/lists/post-example
 
     header
     {
@@ -99,13 +99,192 @@ Next type`path`, then on the next line enter the api endpoint.
        method=DELETE
 
        path
-       __api/web/lists/endpoint-path
+       _api/web/lists/endpoint-path
 
     ```
 ```
 
 ## Header (optional)
 
-Type `header`, then on the next line enter header information.
+Type `header`, then on the next line enter header information. This is optional, if left blank the header section will not appear in the custom fence layout.
+
+```
+    ```httpCall
+
+       method=DELETE
+
+       path
+       _api/web/lists/endpoint-path
+
+       header
+       {
+        "key" : "value"
+       }
+
+    ```
+```
 
 ## Body (optional)
+
+Type `body`, then on the next line enter the body information.  This is optional, if left blank the body section will not appear in the custom fence layout.
+
+```
+    ```httpCall
+
+       method=DELETE
+
+       path
+       _api/web/lists/endpoint-path
+
+       header
+       {
+        "key" : "value"
+       }
+
+       body
+       {
+        "key" : "value"
+       }
+
+    ```
+```
+
+## Configuring Custom Fences
+
+Custom Fences Files
+
+- [custom_fences.py](/assets/python/custom_fences.py)
+- [custom_fences.css](/assets/css/custom_fences.css)
+- [custom_fences.js](/assets/js/custom_fences.js)
+
+Add markdown extension for custom super fences
+
+```markdown title="mkdocs.yml"
+    markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: httpCall
+          class: http
+          format: !!python/name:docs.assets.python.custom_fences.httpCall
+```
+
+While configuring the custom fences, the following error was encounter both locally while using `mkdocs serve` and when deploying to GitHub Pages.  The custom fences module was not able to be found. Both issues were related to the module not being added to the `PYTHONPATH`.  
+
+!!! failure
+    Error: MkDocs encountered an error parsing the configuration file: while constructing a Python object cannot find module 'custom_fences' (No module named 'custom_fences')
+
+### MkDocs Serve (Local) setup
+
+1. Activate Virtual Environment
+
+    === ":fontawesome-brands-windows: **Windows**"
+
+        ```cmd title="PowerShell"
+        # Activate the virtual environment
+        venv\Scripts\activate.bat
+        ```
+
+2. Set `PYTHONPATH`
+
+    === ":fontawesome-brands-windows: **Windows**"
+
+        ```cmd title="PowerShell"
+        # Ensure `PYTHONPATH` is set in the current session
+        $env:PYTHONPATH = "C:\{User\Path}\source\repos\mkdocs\mkdocs-notebook"
+        ```
+
+3. Check `PYTHONPATH`
+
+    === ":fontawesome-brands-windows: **Windows**"
+
+        ```cmd title="PowerShell"
+        # Confirm it’s set correctly
+        $env:PYTHONPATH
+        ```
+
+!!! info
+    These steps will need repeated each time the virtual environment is closed
+
+### GitHub Actions Workflow
+
+Updating the GitHub Actions Workflow for MkDocs Deployment
+
+Update your `.github/workflows/deploy.yml` workflow file to ensure it correctly handles dependencies and sets the `PYTHONPATH` to include your custom module. Here’s how you can modify your existing `.github/workflows/deploy.yml`:
+
+1. **Add a `requirements.txt` file**:
+    - Create a `requirements.txt` file in the root of your repository (if you haven’t already) with the necessary dependencies:
+
+    ```plaintext
+    mkdocs
+    mkdocs-material
+    pymdown-extensions
+    ```
+
+2. **Update your `.github/workflows/deploy.yml`**:
+    - Modify your `.github/workflows/deploy.yml` to set the `PYTHONPATH` and install dependencies from `requirements.txt`.
+
+    ```yaml title="GitHub Workflow  File"
+
+    name: ci
+
+    on:
+    push:
+        branches:
+        - master
+        - main
+
+    permissions:
+    contents: write
+
+    jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v4
+        
+        - name: Configure Git Credentials
+            run: |
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+        
+        - uses: actions/setup-python@v5
+            with:
+            python-version: 3.x
+        
+        - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+        
+        - uses: actions/cache@v4
+            with:
+            key: mkdocs-material-${{ env.cache_id }}
+            path: .cache
+            restore-keys: |
+                mkdocs-material-
+        
+        - name: Install dependencies
+            run: |
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+        
+        - name: Set PYTHONPATH
+            run: |
+            export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/docs/assets/python
+            echo "PYTHONPATH=$PYTHONPATH" >> $GITHUB_ENV
+        
+        - name: Deploy to GitHub Pages
+            run: mkdocs gh-deploy --force
+
+    ```
+
+### Explanation of the Updated Steps
+
+1. **Install Dependencies**:
+    - This step ensures all dependencies listed in `requirements.txt` are installed, which includes `mkdocs`, `mkdocs-material`, and any other packages you may have listed.
+
+2. **Set PYTHONPATH**:
+    - This step sets the `PYTHONPATH` environment variable to include your custom module path (`docs/assets/python`). The path is then exported to the GitHub Actions environment.
+
+3. **Deploy to GitHub Pages**:
+    - The `mkdocs gh-deploy --force` command is run to deploy the site.
+
+By following these steps, you should be able to deploy your MkDocs site on GitHub Pages without encountering the module import error. Ensure your `custom_fences.py` is correctly located in the `docs/assets/python/` directory.
