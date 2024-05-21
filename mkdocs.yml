@@ -95,5 +95,6 @@ nav:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
   # - How To: "how-to/index.md"
+  - TODO: "research/todo.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
