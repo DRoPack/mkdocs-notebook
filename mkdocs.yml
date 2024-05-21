@@ -75,12 +75,12 @@ nav:
           - Markdown Basics: "markdown/markdown-basics.md"
           - MkDocs Setup: "markdown/mkdocs-setup.md"
           - Custom Fences: "markdown/custom-fences.md"
-      - JavaScript:
-          - "javascript/index.md"
-      - HTML:
-          - "html/index.md"
-      - CSS:
-          - "css/index.md"
+      # - JavaScript:
+      #     - "javascript/index.md"
+      # - HTML:
+      #     - "html/index.md"
+      # - CSS:
+      #     - "css/index.md"
       - Microsoft:
           - "microsoft/index.md"
           - SharePoint:
