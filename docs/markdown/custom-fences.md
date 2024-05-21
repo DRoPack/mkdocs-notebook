@@ -89,7 +89,7 @@ To pick the method of the HTTP call, write `method=<method>` on the next line of
 | `PATCH`     | <button class="method--button method--patch">PATCH</button>    #af01d9 |
 | `DELETE`    | <button class="method--button method--delete">DELETE</button>    #f93e3e |
 
-## Path
+### Path
 
 Next type`path`, then on the next line enter the api endpoint.
 
@@ -104,7 +104,7 @@ Next type`path`, then on the next line enter the api endpoint.
     ```
 ```
 
-## Header (optional)
+### Header (optional)
 
 Type `header`, then on the next line enter header information. This is optional, if left blank the header section will not appear in the custom fence layout.
 
@@ -124,7 +124,7 @@ Type `header`, then on the next line enter header information. This is optional,
     ```
 ```
 
-## Body (optional)
+### Body (optional)
 
 Type `body`, then on the next line enter the body information.  This is optional, if left blank the body section will not appear in the custom fence layout.
 
@@ -153,9 +153,9 @@ Type `body`, then on the next line enter the body information.  This is optional
 
 Custom Fences Files
 
-- [custom_fences.py](/assets/python/custom_fences.py)
-- [custom_fences.css](/assets/css/custom_fences.css)
-- [custom_fences.js](/assets/js/custom_fences.js)
+- [custom_fences.py](../assets/python/custom_fences.py)
+- [custom_fences.css](../assets/css/custom_fences.css)
+- [custom_fences.js](../assets/js/custom_fences.js)
 
 Add markdown extension for custom super fences
 
