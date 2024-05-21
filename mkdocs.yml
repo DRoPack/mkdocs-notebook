@@ -91,6 +91,9 @@ nav:
               - "microsoft/power-automate/index.md"
               - Expressions: "microsoft/power-automate/expressions.md"
               - Rest API: "microsoft/power-automate/rest-api.md"
+      - Git:
+          - "git/index.md"
+          - Git Cheatsheet: "git/git-cheatsheet.md"
   # - How To: "how-to/index.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
