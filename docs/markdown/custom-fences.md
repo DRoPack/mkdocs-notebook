@@ -171,9 +171,10 @@ Add markdown extension for custom super fences
 While configuring the custom fences, the following error was encounter both locally while using `mkdocs serve` and when deploying to GitHub Pages.  The custom fences module was not able to be found. Both issues were related to the module not being added to the `PYTHONPATH`.  
 
 !!! failure
+    Message
     Error: MkDocs encountered an error parsing the configuration file: while constructing a Python object cannot find module 'custom_fences' (No module named 'custom_fences')
 
-### MkDocs Serve (Local) setup
+### Add Path
 
 1. Activate Virtual Environment
 
@@ -276,7 +277,7 @@ Update your `.github/workflows/deploy.yml` workflow file to ensure it correctly 
 
     ```
 
-### Explanation of the Updated Steps
+**Explanation of the Updated Steps**
 
 1. **Install Dependencies**:
     - This step ensures all dependencies listed in `requirements.txt` are installed, which includes `mkdocs`, `mkdocs-material`, and any other packages you may have listed.
@@ -286,5 +287,3 @@ Update your `.github/workflows/deploy.yml` workflow file to ensure it correctly 
 
 3. **Deploy to GitHub Pages**:
     - The `mkdocs gh-deploy --force` command is run to deploy the site.
-
-By following these steps, you should be able to deploy your MkDocs site on GitHub Pages without encountering the module import error. Ensure your `custom_fences.py` is correctly located in the `docs/assets/python/` directory.
