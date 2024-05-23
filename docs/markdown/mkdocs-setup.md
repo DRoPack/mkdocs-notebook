@@ -94,8 +94,8 @@ cd my-project
     source venv/bin/activate
     ```
 
-    !!! note
-        Reactivate an existing virtual environment by following the same instructions to activate.  There's no need to create a new virtual environment.
+!!! note
+    Reactivate an existing virtual environment by following the same instructions to activate.  There's no need to create a new virtual environment.
 
 ## Project layout
 
