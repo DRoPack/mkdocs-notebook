@@ -7,3 +7,7 @@
 - [SVG Map](https://github.com/WebsiteBeaver/interactive-and-responsive-svg-map-of-us-states-capitals/blob/master/index.html)
 - [SVG Animation](https://blog.logrocket.com/how-to-animate-svg-css-tutorial-examples/)
 - [HTML/CSS Toggle](https://www.youtube.com/watch?v=_g1ZBfZEdwU)
+
+## AI Stuff
+
+- [Moondream1 Locally](https://www.youtube.com/watch?v=Pn4ZmBo-G2o)
