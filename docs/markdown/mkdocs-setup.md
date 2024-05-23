@@ -74,14 +74,14 @@ cd my-project
     venv\Scripts\activate.bat
     ```
 
-=== ":fontawesome-brands-bash: **Git Bash**"
+=== ":material-git:: **Git Bash**"
 
-    ```cmd title="Git Bash Windows"
+    ```bash title="Git Bash Windows"
     # Make the virtual environment
-    python -m venv .venv
+    python -m venv venv
 
     # Activate the virtual environment
-    source .venv/Scripts/activate
+    source venv/bin/activate
     ```
 
 === ":fontawesome-brands-linux: **Linux/macOS**"
