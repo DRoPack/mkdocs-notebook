@@ -1,6 +1,6 @@
 # MkDocs
 
-`MkDocs` is a static site generator that provides a simplistic way for generating documentation written in `markdown`. `MkDocs` alone has a rich feature set of plugins and themes that will handle your documentation needs. However, the user community has contributed vastly to this project and added additional packages that can be installed to improve upon `MkDocs`. One of most highly used packages is `MkDocs Material`.
+`MkDocs` is a static site generator that provides a simplistic way for generating documentation written in `markdown`. `MkDocs` alone has a rich feature set of plugins and themes that will handle your documentation needs. However, the user community has contributed vastly to this project and added additional packages that can be installed to improve upon `MkDocs`. One of the most highly used packages is `Material for MkDocs`.
 
 ## Python Install
 
@@ -29,13 +29,13 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
 [MkDocs Documentation](https://www.mkdocs.org/)
 
-Install `mkdocs` package using pip:
+Install `MkDocs` package using pip:
 
 ```cmd title="Windows cmd"
 pip install mkdocs
 ```
 
-After install check installation of `mkdocs` from the command line
+After install check installation of `MkDocs` from the command line
 
 ```cmd title="Windows cmd"
 $mkdocs --version
@@ -57,12 +57,12 @@ cd my-project
 
 ## Python Virtual Environment
 
-`Python 3` has a [built-in virtual environment][python-virtual-env] that will isolate project packages from other projects on your system. It's recommended to **activate the virtual environment each time** you open a `Python` project to work on it. The virtual environment will cease each time you close the shell or IDE from which you activated from.
+`Python 3` has a [built-in virtual environment][python-virtual-env] that will isolate project packages from other projects on your system. It is recommended to **activate the virtual environment each time** you open a `Python` project to work on it. The virtual environment will cease each time you close the shell or IDE from which you activated from.
 
 [python-virtual-env]: https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment
 
 !!! note
-    The command lines below are execute while inside your `Python` project directory
+    The command lines below are executed while inside your `Python` project directory
 
 === ":fontawesome-brands-windows: **Windows**"
 
@@ -95,7 +95,7 @@ cd my-project
     ```
 
 !!! note
-    Reactivate an existing virtual environment by following the same instructions to activate.  There's no need to create a new virtual environment.
+    Reactivate an existing virtual environment by following the same instructions to activate.  There is no need to create a new virtual environment.
 
 ## Project layout
 
