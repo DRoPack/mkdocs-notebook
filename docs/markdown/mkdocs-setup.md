@@ -25,11 +25,11 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
 ![Python Installer](../assets/img/markdown/win-py-install.png)
 
-## Install MkDocs
+## MkDocs / Material for MkDocs Install
 
 === ":simple-materialformkdocs: **Material for MkDocs**"
 
-    ## Installing Material for MkDocs
+    ## Material for MkDocs
     
     This will automatically install these dependencies: `MkDocs`, `Markdown`, `Pygments` and `Python Markdown Extensions`.
 
@@ -40,7 +40,7 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
     ```
 === ":fontawesome-brands-markdown: **MkDocs**"
 
-    ## Installing MkDocs
+    ## MkDocs
 
     This will install `MkDocs` only. 
 
