@@ -25,22 +25,39 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
 ![Python Installer](../assets/img/markdown/win-py-install.png)
 
-## Installing MkDocs
+## Install MkDocs
 
-[MkDocs Documentation](https://www.mkdocs.org/)
+=== ":simple-materialformkdocs: **Material for MkDocs**"
 
-Install `MkDocs` package using pip:
+    ## Installing Material for MkDocs
+    
+    This will automatically install these dependencies: `MkDocs`, `Markdown`, `Pygments` and `Python Markdown Extensions`.
 
-```cmd title="Windows cmd"
-pip install mkdocs
-```
+    [Material for MkDocs Documentation](https://squidfunk.github.io/mkdocs-material/)
 
-After install check installation of `MkDocs` from the command line
+    ```cmd title="Windows cmd"
+    pip install mkdocs-material
+    ```
+=== ":fontawesome-brands-markdown: **MkDocs**"
 
-```cmd title="Windows cmd"
-$mkdocs --version
-mkdocs, version 1.5.3 from C:...\Programs\Python\Python312\Lib\site-packages\mkdocs (Python 3.12)
-```
+    ## Installing MkDocs
+
+    This will install `MkDocs` only. 
+
+    [MkDocs Documentation](https://www.mkdocs.org/)
+
+    Install `MkDocs` package using pip:
+
+    ```cmd title="Windows cmd"
+    pip install mkdocs
+    ```
+
+    After install check installation of `MkDocs` from the command line
+
+    ```cmd title="Windows cmd"
+    $mkdocs --version
+    mkdocs, version 1.5.3 from C:...\Programs\Python\Python312\Lib\site-packages\mkdocs (Python 3.12)
+    ```
 
 ## Creating a New Project
 
@@ -74,7 +91,7 @@ cd my-project
     venv\Scripts\activate.bat
     ```
 
-=== ":material-git:: **Git Bash**"
+=== ":material-git: **Git Bash**"
 
     ```bash title="Git Bash Windows"
     # Make the virtual environment
