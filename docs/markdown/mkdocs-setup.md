@@ -88,7 +88,7 @@ cd my-project
     python -m venv venv
 
     # Activate the virtual environment
-    venv\Scripts\activate.bat
+    .venv\Scripts\activate.bat
     ```
 
 === ":material-git: **Git Bash**"
@@ -98,7 +98,7 @@ cd my-project
     python -m venv venv
 
     # Activate the virtual environment
-    source venv/bin/activate
+    source .venv/bin/activate
     ```
 
 === ":fontawesome-brands-linux: **Linux/macOS**"
