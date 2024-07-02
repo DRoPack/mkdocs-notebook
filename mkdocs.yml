@@ -94,6 +94,9 @@ nav:
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
+      - PowerShell:
+          - "powershell/index.md"
+          - PnP-PowerShell: "powershell/pnp-powershell/index.md"
   # - How To: "how-to/index.md"
   - TODO: "research/todo.md"
 
