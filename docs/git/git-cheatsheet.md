@@ -25,14 +25,24 @@ git ls-files                            # Display all files being tracked in Git
 ## Reset Local
 
 ```sh
+
 git reset -- hard                       # Reset local changes  
 # Use if local repo not sync'd remote repository after rebase
+
+```
+
+## Staging Exclude Folder/File
+
+```sh
+
+git add . ":!docs/markdown/mkdocs-material.md"  # Excludes folder/file from from staging
 
 ```
 
 ## Staging Remove
 
 ```sh
+
 git restore --staged file.txt || .      # Remove files from staging
 git rm --cached file1.js                # Remove file from staging
 git rm --cached -r logs/                # Remove folder and all contents (recursive flag)
@@ -42,6 +52,7 @@ git rm --cached -r logs/                # Remove folder and all contents (recurs
 ## Remotes
 
 ```sh
+
 git remote                              # List remote names
 git remote -v                           # Show details of remotes
 git fetch upstream                      # Get updates from source repository (default origin)
