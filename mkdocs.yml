@@ -87,6 +87,10 @@ nav:
               - "microsoft/sharepoint/index.md"
               - Web Parts: "microsoft/sharepoint/webparts.md"
               - Query Parameters: "microsoft/sharepoint/query-parameters.md"
+          - SharePoint Framework (SPFx):
+              - "microsoft/sharepoint-framework/index.md"
+              - Resources: "microsoft/sharepoint-framework/resources.md"
+              - Environment Setup: "microsoft/sharepoint-framework/environment-setup.md"
           - Power Automate:
               - "microsoft/power-automate/index.md"
               - Expressions: "microsoft/power-automate/expressions.md"
@@ -94,6 +98,9 @@ nav:
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
+      - Node:
+          - "node/index.md"
+          - NVM: "node/nvm.md"
       - PowerShell:
           - "powershell/index.md"
           - PnP-PowerShell: "powershell/pnp-powershell/index.md"
