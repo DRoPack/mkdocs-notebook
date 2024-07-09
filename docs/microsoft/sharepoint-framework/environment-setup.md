@@ -18,9 +18,10 @@
 
 ```cmd
     npm list -g --depth=0
-``
+```
 
-[SharePoint 2019 Instructions](#sharePoint-2019-setup)
+[SharePoint 2019 Instructions](#sharepoint-2019-setup)
+
 ## Install Yeoman
 
 [Yeoman Website](https://yeoman.io/)
