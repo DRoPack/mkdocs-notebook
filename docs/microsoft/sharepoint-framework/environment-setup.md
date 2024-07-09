@@ -16,9 +16,16 @@
 
 ## Check global packages installed
 
+Check which npm packages are installed on the current version of `Node` by running the following command.
+
 ```cmd
-  npm list -g --depth=0
+npm list -g --depth=0
 ```
+
+## Install Node.Js
+
+!!! note
+    See above for `NVM` for installing Node.  The preference is to use `NVM` so multiple versions of `Node.js` can be installed on your development computer.
 
 [SharePoint 2019 Instructions](#sharepoint-2019-setup)
 
@@ -35,10 +42,25 @@ Yeoman is language agnostic. It can generate projects in any language (Web, Java
     But wait, it does!!  For SharePoint 2019 on-premise the installed version of `Yeoman` needs to be yo@3.1.1
 
 ``` cmd
-  npm install yo --global
+npm install yo --global
 ```
 
-## SharePoint 2019 Setup
+## Install TypeScript
+
+TypeScript is installed by the generator locally to the project when `npm` install is run.
+
+## Gulp
+
+[Gulp Website](https://gulpjs.com/)
+
+```cmd
+npm install -g gulp-cli
+```
+
+``` info
+    All previous versions of `SPFx` starting with v1.12.1 are only supported with `Gulp v3`. Starting with `Node v12` and higher `Gulp v4` is only supported.
+
+## SharePoint 2019 Setup {#sharepoint-2019-setup}
 
 [Andrew Connel Recommendation](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/)
 
@@ -50,5 +72,5 @@ Yeoman is language agnostic. It can generate projects in any language (Web, Java
 - [x] Yeoman v3.1.1
 
 ```cmd
-  npm install gulp-cli@2.3.0 yo@3.1.1 @microsoft/generator-sharepoint@1.10.0 --global
-``
+npm install gulp-cli@2.3.0 yo@3.1.1 @microsoft/generator-sharepoint@1.10.0 --global
+```
