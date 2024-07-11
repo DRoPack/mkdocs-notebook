@@ -90,10 +90,12 @@ nav:
               - "microsoft/sharepoint/index.md"
               - Web Parts: "microsoft/sharepoint/webparts.md"
               - Query Parameters: "microsoft/sharepoint/query-parameters.md"
-          - SharePoint Framework (SPFx):
+          - SPFx:
               - "microsoft/sharepoint-framework/index.md"
-              - Resources: "microsoft/sharepoint-framework/resources.md"
-              - Environment Setup: "microsoft/sharepoint-framework/environment-setup.md"
+              - Resources: "microsoft/sharepoint-framework/-spfx-resources.md"
+              - Setup: "microsoft/sharepoint-framework/spfx-setup.md"
+              - Basics: "microsoft/sharepoint-framework/spfx-basics.md"
+              - CSS: "microsoft/sharepoint-framework/spfx-css.md"
           - Power Automate:
               - "microsoft/power-automate/index.md"
               - Expressions: "microsoft/power-automate/expressions.md"
