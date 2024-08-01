@@ -6,7 +6,7 @@ Microsoft uses CSS modules to ensure specificity of classes between `SPFx` solut
 
 To override the suffix being appended
 
-```css Title="Global override"
+```css title="Global override"
 : global {
     .welcome {
         text-align:  center;
