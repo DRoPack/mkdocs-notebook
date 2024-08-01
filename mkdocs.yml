@@ -78,8 +78,9 @@ nav:
           - Markdown Basics: "markdown/markdown-basics.md"
           - MkDocs Setup: "markdown/mkdocs-setup.md"
           - Custom Fences: "markdown/custom-fences.md"
-      # - JavaScript:
-      #     - "javascript/index.md"
+      - JavaScript:
+          - "javascript/index.md"
+          - "javascript/fetch.md"
       # - HTML:
       #     - "html/index.md"
       # - CSS:
@@ -88,11 +89,14 @@ nav:
           - "microsoft/index.md"
           - SharePoint:
               - "microsoft/sharepoint/index.md"
+              - Administration:
+                  - "microsoft/sharepoint/administration/index.md"
+                  - Patching: "microsoft/sharepoint/administration/patching.md"
               - Web Parts: "microsoft/sharepoint/webparts.md"
               - Query Parameters: "microsoft/sharepoint/query-parameters.md"
           - SPFx:
               - "microsoft/sharepoint-framework/index.md"
-              - Resources: "microsoft/sharepoint-framework/-spfx-resources.md"
+              - Resources: "microsoft/sharepoint-framework/spfx-resources.md"
               - Setup: "microsoft/sharepoint-framework/spfx-setup.md"
               - Basics: "microsoft/sharepoint-framework/spfx-basics.md"
               - CSS: "microsoft/sharepoint-framework/spfx-css.md"
@@ -109,7 +113,6 @@ nav:
       - PowerShell:
           - "powershell/index.md"
           - PnP-PowerShell: "powershell/pnp-powershell/index.md"
-  # - How To: "how-to/index.md"
   - TODO: "research/todo.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
