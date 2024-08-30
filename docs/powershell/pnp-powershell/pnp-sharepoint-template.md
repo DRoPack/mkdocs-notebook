@@ -1,4 +1,4 @@
-# PnP SharPoint template with logging
+# PnP SharePoint template with logging
 
 Template base used for SharePoint scripts using PnP PowerShell. Template includes PnP connect and disconnect functions, as well as log to log file, Seq, and console logging.  
 
