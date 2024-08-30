@@ -112,7 +112,9 @@ nav:
           - NVM: "node/nvm.md"
       - PowerShell:
           - "powershell/index.md"
-          - PnP-PowerShell: "powershell/pnp-powershell/index.md"
+          - PnP-PowerShell:
+              - "powershell/pnp-powershell/index.md"
+              - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
   - TODO: "research/todo.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
