@@ -7,7 +7,7 @@ Template base used for SharePoint scripts using PnP PowerShell. Template include
 <##############################################
 Author:       
 Date:         
-Description:  PnP SharePoint Template with Loggging 
+Description:  PnP SharePoint Template with Logging 
 Location:      
 ##############################################>
 
@@ -17,7 +17,7 @@ param (
     [switch] $seqLogging, # Writes to Seq
     [switch] $debug, # Writes to network log file
     [switch] $consoleLog, # Outputs to console, debug must be enabled
-    [string] $logFileName = 'ReanmeFile-Log'
+    [string] $logFileName = 'RenameFile-Log'
 )
 
 # Test Data
