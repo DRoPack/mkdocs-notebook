@@ -12,7 +12,7 @@ theme:
     - search.tabs.link
     - content.code.annotation
     - content.code.copy
-    - toc.integrate
+    # - toc.integrate
     - toc.follow
   language: en
   palette:
