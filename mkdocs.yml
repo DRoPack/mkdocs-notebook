@@ -105,7 +105,6 @@ nav:
               - CSS: "microsoft/sharepoint-framework/spfx-css.md"
           - Power Automate:
               - "microsoft/power-automate/index.md"
-              - Expressions: "microsoft/power-automate/expressions.md"
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
