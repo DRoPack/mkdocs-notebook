@@ -1,11 +1,6 @@
----
-  - navigation
-  - toc
----
-
 # Arrays
 
-## Compare Two Arrays (without using Apply to Each)
+## Compare Two Arrays
 
 Comparing two arrays to find matches or differences doesn't have to be complicated with<br>
 lots of Apply to Each actions.  Using the Select Data Operation action along with the Filter Array<br>
