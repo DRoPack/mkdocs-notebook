@@ -6,6 +6,7 @@ theme:
     - navigation.indexes
     - navigation.top
     - navigation.path
+    - navigation.instant
     - search.suggest
     - search.tabs.link
     - content.code.annotation
