@@ -1,3 +1,8 @@
+---
+  - navigation
+  - toc
+---
+
 # Arrays
 
 ## Compare Two Arrays (without using Apply to Each)
