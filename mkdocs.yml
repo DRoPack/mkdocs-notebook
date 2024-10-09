@@ -87,6 +87,9 @@ nav:
       #     - "css/index.md"
       - Microsoft:
           - "microsoft/index.md"
+          - Rest API:
+              - "microsoft/rest-api/index.md"
+              - Rest API: "microsoft/power-automate/rest-api.md"
           - SharePoint:
               - "microsoft/sharepoint/index.md"
               - Administration:
@@ -103,7 +106,6 @@ nav:
           - Power Automate:
               - "microsoft/power-automate/index.md"
               - Expressions: "microsoft/power-automate/expressions.md"
-              - Rest API: "microsoft/power-automate/rest-api.md"
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
