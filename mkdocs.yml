@@ -89,7 +89,7 @@ nav:
           - "microsoft/index.md"
           - Rest API:
               - "microsoft/rest-api/index.md"
-              - Rest API: "microsoft/power-automate/rest-api.md"
+              - Rest API: "microsoft/rest-api/rest-api.md"
           - SharePoint:
               - "microsoft/sharepoint/index.md"
               - Administration:
