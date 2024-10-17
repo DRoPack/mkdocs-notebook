@@ -85,8 +85,8 @@ nav:
           - "javascript/fetch.md"
       # - HTML:
       #     - "html/index.md"
-      # - CSS:
-      #     - "css/index.md"
+      - CSS:
+          - "css/index.md"
       - Microsoft:
           - "microsoft/index.md"
           - Rest API:
