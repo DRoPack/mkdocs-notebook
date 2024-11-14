@@ -17,6 +17,7 @@ param (
     [switch] $seqLogging, # Writes to Seq
     [switch] $debug, # Writes to network log file
     [switch] $consoleLog, # Outputs to console, debug must be enabled
+    [string] $guid = [System.Guid]::NewGuid(), # Create unique GUID
     [string] $logFileName = 'RenameFile-Log'
 )
 
@@ -33,7 +34,7 @@ $scriptParentDir = $scriptDirInfo.Parent.FullName
 
 $shared = [System.IO.Path]::Combine($scriptParentDir, "Shared", "Logging.ps1")
 . $shared
-Initialize-Logging -MinLogLevel $MinLogLevel | Out-Null
+Initialize-Logging -MinLogLevel $MinLogLevel -CorrelationId $guid | Out-Null
 
 # Push logging comment to SeqLogging and WriteLog
 function log
