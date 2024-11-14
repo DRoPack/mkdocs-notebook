@@ -28,7 +28,7 @@ $web = @{url = 'https://blotter.sharepoint.com' }
 # Imports/ Modules
 $scriptDirInfo = New-Object System.IO.DirectoryInfo($PSScriptRoot)
 $scriptParentDir = $scriptDirInfo.Parent.FullName
-. \\--UPDATE--ServerPath\PowerShell\CommonLib.ps1 # Load the common library, Required for MSGraph token
+. \\**UPDATE--ServerPath**\PowerShell\CommonLib.ps1 # Load the common library, Required for MSGraph token
 
 
 $shared = [System.IO.Path]::Combine($scriptParentDir, "Shared", "Logging.ps1")
@@ -107,8 +107,8 @@ function connect()
     writeLog -comment $("-" * 50)
     try
     {
-        $connect = Connect-PnPOnline $web.Url -CurrentCredentials
-        log -comment 'Connect-PnPOnline connection success'
+        $connect = Connect-PnPOnline $web.Url -CurrentCredentials -ReturnConnection
+        log -comment ("Connect-PnPOnline connection success. {0}" -f $web.Url)
         return $connect
     }
     catch
@@ -122,8 +122,8 @@ function disconnect($connect)
 {
     try
     {
-        # PnP Disconnect has no awareness to specific connections, recommend clearing connection from variable
-        $connect = $null
+        # PnP Disconnect 
+        Disconnect-PnPOnline -Connection $connect
         log -comment 'Connect-PnPOnline connection closed'
     }
     catch
