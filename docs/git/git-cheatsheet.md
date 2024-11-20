@@ -6,7 +6,8 @@
 
 git clone https://github/repo           # Clone repo from GitHub to local machine
 git add . || git add fileName.txt       # Add to staging, multiple files just add a space between files
-git commit -m "Fixed bug…"              # Commit changes 
+git commit -m "Fixed bug…"              # Commit changes
+git commit --amend                      # Amend commit message prior to push
 git push                                # Push changes to GitHub
 git pull --rebase                       # Update local with GitHub code
 
@@ -19,6 +20,43 @@ git pull --rebase                       # Update local with GitHub code
 git status || git status -s             # Status
 git log --oneline --all --graph         # Show linear graph of all local commits (q to exit)
 git ls-files                            # Display all files being tracked in Git
+
+```
+
+## Stash
+
+```sh
+
+git stash push -m "Work in progress"   # Save uncommitted changes and add a message
+git stash list                         # List all stashed changes
+git stash apply stash@{2}              # Apply specific stash to the working directory (does not remove it)
+git stash drop stash@{1}               # Delete a specific stash
+git stash pop stash@{2}                # Apply specific stash and remove it from the stash list
+
+git stash show stash@{1}               # Show a summary of changes in a specific stash
+git stash show -p stash@{2}            # Show a detailed diff of changes in a specific stash
+
+```
+
+## Branching
+
+```sh
+
+git branch                              # List all branches in the repository
+git branch <branch-name>                # Create a new branch
+
+git switch <branch-name>                # Switch to an existing branch
+git switch -c <branch-name>             # Create a new branch and switch to it
+
+git branch -d <branch-name>             # Delete a branch (if it's fully merged)
+git branch -D <branch-name>             # Force delete a branch (even if it's not merged)
+
+git merge <branch-name>                 # Merge a branch into the current branch
+git rebase <branch-name>                # Rebase the current branch onto another branch
+
+git pull origin <branch-name>           # Pull changes from a specific branch on the remote
+git push origin <branch-name>           # Push the branch to the remote repository
+git push origin --delete <branch-name>  # Delete a branch from the remote repository
 
 ```
 
