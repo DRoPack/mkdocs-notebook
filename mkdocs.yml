@@ -87,6 +87,9 @@ nav:
       #     - "html/index.md"
       - CSS:
           - "css/index.md"
+          - Attribute Selectors: "css/attribute-selectors.md"
+          - Combinators: "css/combinators.md"
+          - Pseudo Selectors: "css/pseudo-selectors.md"
       - Microsoft:
           - "microsoft/index.md"
           - Rest API:
