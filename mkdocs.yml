@@ -36,7 +36,7 @@ markdown_extensions:
       custom_fences:
         - name: httpCall
           class: http
-          format: !!python/name:docs.assets.python.custom_fences.httpCall
+          # format: !!python/name:docs.assets.python.custom_fences.httpCall
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
