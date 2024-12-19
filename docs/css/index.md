@@ -22,6 +22,8 @@
 
 `box-sizing` is a CSS property used to define how the total width and height of an element are calculated. It controls whether the padding and border are included in the element's dimensions or not. A best practice is to apply it as a universal selector to set the default behavior for the entire `HTML` document.
 
+- `border-box` - accounts for any border and padding values in the elements total width and height
+
 === "CSS"
 
     ```css
