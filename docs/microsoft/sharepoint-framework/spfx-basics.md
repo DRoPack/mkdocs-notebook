@@ -4,19 +4,19 @@
 
 Open `cmd` command prompt and navigate to the folder where the project will be stored
 
-```cmd Title="Navigating Folders"
+```cmd title="Navigating Folders"
 C:\Users\Me> cd repos\spfx-project
 ```
 
-```cmd Title="Create Project Directory"
+```cmd title="Create Project Directory"
 C:\Users\Me\repos\spfx-project> mkdir HelloWorld
 ```
 
-```cmd Title="Navigate to new Project Directory"
+```cmd title="Navigate to new Project Directory"
 C:\Users\Me\repos\spfx-project\HelloWord> mkdir HelloWorld
 ```
 
-```cmd Title="Run Yeoman Generator"
+```cmd title="Run Yeoman Generator"
 C:\Users\Me\repos\spfx-project\HelloWord> yo @microsoft/sharepoint
 
 
@@ -37,7 +37,7 @@ Let's create a new SharePoint solution.
 !!! info
     By default the `Yeoman` generator will do an `npm install` and install all the dependencies if you wish to skip the `npm install` portion.  Run the follow flag.
 
-    ```cmd Title="Skip NPM Install"
+    ```cmd title="Skip NPM Install"
     yo @microsoft/sharepoint --skip-install
     ```
     
@@ -52,7 +52,7 @@ Let's create a new SharePoint solution.
 
 This command just needs run once on the development machine.  It is not local to the project folder. This allows `Gulp` to serve the project up in the hosted workbench with a trusted certificate.
 
-```cmd Title="Install Dev Certificate"
+```cmd title="Install Dev Certificate"
 gulp trust-dev-cert
 ```
 
