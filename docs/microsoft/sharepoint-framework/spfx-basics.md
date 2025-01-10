@@ -13,7 +13,7 @@ C:\Users\Me\repos\spfx-project> mkdir HelloWorld
 ```
 
 ```cmd title="Navigate to new Project Directory"
-C:\Users\Me\repos\spfx-project\HelloWord> mkdir HelloWorld
+C:\Users\Me\repos\spfx-project> cd HelloWorld
 ```
 
 ```cmd title="Run Yeoman Generator"
@@ -34,6 +34,11 @@ Let's create a new SharePoint solution.
 ? What is your solution name? hello-world
 ```
 
+## Yeoman Generator Prompts
+
+!!! note
+    The `Yeoman` prompts for SharePoint will vary depending on the version of `Yeoman` installed.
+
 !!! info
     By default the `Yeoman` generator will do an `npm install` and install all the dependencies if you wish to skip the `npm install` portion.  Run the follow flag.
 
@@ -41,12 +46,7 @@ Let's create a new SharePoint solution.
     yo @microsoft/sharepoint --skip-install
     ```
     
-    After the project is created, it's the developers responsibility to run the `npm install`.  The benefit of doing it this way is that the generator will create the scaffold out the project faster.
-
-## Yeoman Generator Prompts
-
-!!! note
-    The `Yeoman` prompts for SharePoint will vary depending on the version of `Yeoman` install.
+    After the project is created, it's the developers responsibility to run the `npm install`.  The benefit of doing it this way is that the generator will scaffold out the project faster.
 
 ## Install Local Certificate
 
@@ -63,4 +63,20 @@ gulp trust-dev-cert
 
 Microsoft has deprecated the local workbench starting with `SPFx v1.13` and only supports the hosted workbench served from a SharePoint site.  Append <_layouts/15/workbench.aspx> to the url where you will be testing the `SPFx` solution.
 
-Inside your project navigate to the config folder, then server.json file.  Then update the `initialPage` property inside the file with "<https://blotter.sharepoint/_layouts/workbench.aspx>".
+Inside your project navigate to the config folder, then `server.json` file.  Then update the `initialPage` property inside the file with "<https://blotter.sharepoint/_layouts/15/workbench.aspx>".
+
+## Linting (Prettier)
+
+Recommended configuration for linting on `SPFx` projects using `Prettier`
+
+Create `.prettierrc` file in the root of the project
+
+```json
+  {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "semi": true,
+    "trailingComma": "es5",
+    "printWidth": 80
+  }
+```
