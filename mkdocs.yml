@@ -72,6 +72,6 @@ extra_css:
   - assets/css/http-admonitions.css
   - assets/css/custom_fences.css
 
-nav: !include nav.yaml
+nav: !include nav.yml
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
