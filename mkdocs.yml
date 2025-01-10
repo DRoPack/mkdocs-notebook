@@ -116,6 +116,8 @@ nav:
       - Node:
           - "node/index.md"
           - NVM: "node/nvm.md"
+      - NPM:
+          - "npm/index.md"
       - PowerShell:
           - "powershell/index.md"
           - PnP-PowerShell:
