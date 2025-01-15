@@ -3,6 +3,7 @@
 ## GitHub Basics
 
 ```sh
+git init                                # Initialize git to local project
 
 git clone https://github/repo           # Clone repo from GitHub to local machine
 git add . || git add fileName.txt       # Add to staging, multiple files just add a space between files
@@ -97,6 +98,17 @@ git fetch upstream                      # Get updates from source repository (de
 git switch master                       # Switch to master branch
 git merge upstream/master               # Merge new source changes with local files
 git push origin                         # Push merged changes to forked repository (GitHub)
+
+# Initialize New Repository and Push to Github
+1. Create a new repository on GitHub (without initializing it with README, .gitignore, etc..)
+2. Run the following commands in your local project folder:
+    git init                                # Initialize Git in local project
+    git remote add origin <repository-url>  # Add remote repository url
+    git add .                               # Add all files to staging
+    git commit -m "Initial commit"          # Commit staged files
+    git branch -M main                      # Rename the current branch to 'main' (force rename if necessary)
+    git push -u origin main                 # Push the branch and commits to the remote repository
+    git remote -v                           # Verify the remote connection
 
 ```
 
