@@ -71,13 +71,13 @@ Here is a comprehensive table explaining the various characters and notations us
 
 ## Example Command Breakdown
 
-### Command:
+#### Command
 
 ```bash
 npm install @types/jquery@1.10.x --save-dev
 ```
 
-#### Explanation:
+#### Explanation
 
 1. **`@types/jquery`**: The package name (scoped under `@types` for TypeScript definitions).
 2. **`@1.10.x`**: Installs the latest patch version within the `1.10` minor version (e.g., `1.10.5`).
