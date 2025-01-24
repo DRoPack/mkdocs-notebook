@@ -1,4 +1,4 @@
-# CLI Command Reference
+# CMD Reference
 
 ---
 
