@@ -123,6 +123,9 @@ nav:
           - PnP-PowerShell:
               - "powershell/pnp-powershell/index.md"
               - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
+      - Terminal:
+          - "terminal/index.md"
+          - CMD Basics: "terminal/cmd-basics.md"
   - TODO: "research/todo.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
