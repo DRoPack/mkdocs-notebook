@@ -71,6 +71,7 @@ extra_css:
   - assets/css/custom_toc.css
   - assets/css/http-admonitions.css
   - assets/css/custom_fences.css
+  - assets/css/extra.css
 
 nav:
   - Home: "index.md"
