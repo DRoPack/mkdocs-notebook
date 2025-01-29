@@ -5,10 +5,10 @@
 ## Environment Variables
 
 ```cmd
-:: Get all environment variables
+// Get all environment variables
 set
 
-:: Set a variable
+// Set a variable
 set Folder=MyNewFolder
 mkdir %Folder%
 ```
@@ -20,33 +20,33 @@ mkdir %Folder%
 ### Paths
 
 ```cmd
-:: Change path
-cd Users\Mdroschak\Downloads
+// Change path
+cd Users\blotter\Downloads
 
-:: Change path (up 1 level)
+// Change path (up 1 level)
 cd ..
 ```
 
 ### Directory Operations
 
 ```cmd
-:: View directory contents
+// View directory contents
 dir
 
-:: Make a directory
+// Make a directory
 mkdir MyFolder
 
-:: Make and move to a directory
+// Make and move to a directory
 mkdir MyFolder && cd MyFolder
 ```
 
 ### File Operations
 
 ```cmd
-:: Create a file
+// Create a file
 echo "My Content" > file.txt
 
-:: Remove a file
+// Remove a file
 del file.txt
 ```
 
@@ -55,22 +55,12 @@ del file.txt
 ## System Commands
 
 ```cmd
-:: Open Group Policy Editor
+// Open Group Policy Editor
 gpedit.msc
 
-:: Shutdown system immediately
+// Shutdown system immediately
 shutdown -r -t 0
 
-:: Open File Explorer in current path
+// Open File Explorer in current path
 start .
-```
-
----
-
-## Command History
-
-```cmd
-:: Search previous commands
-:: Option 1: Up arrow
-:: Option 2: Ctrl+R (if supported by the tool)
 ```
