@@ -87,11 +87,13 @@ nav:
       # - HTML:
       #     - "html/index.md"
       - SPFx:
-          - "microsoft/sharepoint-framework/index.md"
-          - Resources: "microsoft/sharepoint-framework/spfx-resources.md"
-          - Setup: "microsoft/sharepoint-framework/spfx-setup.md"
-          - Basics: "microsoft/sharepoint-framework/spfx-basics.md"
-          - CSS: "microsoft/sharepoint-framework/spfx-css.md"
+          - "spfx/index.md"
+          - Resources: "spfx/spfx-resources.md"
+          - Setup: "spfx/spfx-setup.md"
+          - Basics: "spfx/spfx-basics.md"
+          - Basics: "spfx/spfx-linting.md"
+          - CSS: "spfx/spfx-css.md"
+          - Kendo JQuery: "spfx/spfx-kendo-jquery.md"
       - CSS:
           - "css/index.md"
           - Attribute Selectors: "css/attribute-selectors.md"
