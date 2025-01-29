@@ -128,6 +128,7 @@ nav:
           - "terminal/index.md"
           - Terminal Config: "terminal/terminal-config.md"
           - CMD Reference: "terminal/cmd-reference.md"
+          - Winget: "terminal/winget.md"
   - TODO: "research/todo.md"
 
 copyright: © 2024 <a href="#" target="blank">DRoPack</a>
