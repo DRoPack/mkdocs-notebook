@@ -86,6 +86,12 @@ nav:
           - "javascript/fetch.md"
       # - HTML:
       #     - "html/index.md"
+      - SPFx:
+          - "microsoft/sharepoint-framework/index.md"
+          - Resources: "microsoft/sharepoint-framework/spfx-resources.md"
+          - Setup: "microsoft/sharepoint-framework/spfx-setup.md"
+          - Basics: "microsoft/sharepoint-framework/spfx-basics.md"
+          - CSS: "microsoft/sharepoint-framework/spfx-css.md"
       - CSS:
           - "css/index.md"
           - Attribute Selectors: "css/attribute-selectors.md"
@@ -103,12 +109,6 @@ nav:
                   - Patching: "microsoft/sharepoint/administration/patching.md"
               - Web Parts: "microsoft/sharepoint/webparts.md"
               - Query Parameters: "microsoft/sharepoint/query-parameters.md"
-          - SPFx:
-              - "microsoft/sharepoint-framework/index.md"
-              - Resources: "microsoft/sharepoint-framework/spfx-resources.md"
-              - Setup: "microsoft/sharepoint-framework/spfx-setup.md"
-              - Basics: "microsoft/sharepoint-framework/spfx-basics.md"
-              - CSS: "microsoft/sharepoint-framework/spfx-css.md"
           - Power Automate:
               - "microsoft/power-automate/index.md"
       - Git:
@@ -131,4 +131,4 @@ nav:
           - Winget: "terminal/winget.md"
   - TODO: "research/todo.md"
 
-copyright: © 2024 <a href="#" target="blank">DRoPack</a>
+copyright: © 2025 <a href="#" target="blank">DRoPack</a>
