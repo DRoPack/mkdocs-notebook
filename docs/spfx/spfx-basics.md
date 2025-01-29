@@ -65,18 +65,12 @@ Microsoft has deprecated the local workbench starting with `SPFx v1.13` and only
 
 Inside your project navigate to the config folder, then `server.json` file.  Then update the `initialPage` property inside the file with "<https://blotter.sharepoint/_layouts/15/workbench.aspx>".
 
-## Linting (Prettier)
+## Running Project
 
-Recommended configuration for linting on `SPFx` projects using `Prettier`
+Preview and test the client-side web part in the SharePoint hosted workbench
 
-Create `.prettierrc` file in the root of the project
+```cmd title="Run Project"
+gulp serve
 
-```json
-  {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "semi": true,
-    "trailingComma": "es5",
-    "printWidth": 80
-  }
+gulp serve --nobrowser
 ```
