@@ -64,7 +64,8 @@ Highlight ==words to get an A== in markdown
 | `[Link to OpenAI](https://openai.com)` | [Link to OpenAI](https://openai.com) |
 | `<https://openai.com>`                 | <https://openai.com>                 |
 | `<fake@example.com>`                   | <fake@example.com>                   |
-| `<fake@example.com>`                   | [Email Me]<fake@example.com>         |
+| `[Email Me](fake@example.com)`         | [Email Me](fake@example.com)         |
+| `[Escaping Charaters](#escaping-charaters)`  | [Escaping Characters](#escaping-characters)    |
 
 ### Reference-style Links
 
