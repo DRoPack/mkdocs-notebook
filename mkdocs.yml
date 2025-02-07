@@ -91,7 +91,7 @@ nav:
           - Resources: "spfx/spfx-resources.md"
           - Setup: "spfx/spfx-setup.md"
           - Basics: "spfx/spfx-basics.md"
-          - Basics: "spfx/spfx-linting.md"
+          - Linting: "spfx/spfx-linting.md"
           - CSS: "spfx/spfx-css.md"
           - Kendo JQuery: "spfx/spfx-kendo-jquery.md"
       - CSS:
