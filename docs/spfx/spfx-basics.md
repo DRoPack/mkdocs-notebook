@@ -40,13 +40,13 @@ Let's create a new SharePoint solution.
     The `Yeoman` prompts for SharePoint will vary depending on the version of `Yeoman` installed.
 
 !!! info
-    By default the `Yeoman` generator will do an `npm install` and install all the dependencies if you wish to skip the `npm install` portion.  Run the follow flag.
+    By default the `Yeoman` generator will do an `npm install` and install all the dependencies if you wish to skip the `npm install` portion.  Run the following flag.
 
-    ```cmd title="Skip NPM Install"
+    ```cmd title="Skip NPM install"
     yo @microsoft/sharepoint --skip-install
     ```
-    
-    After the project is created, it's the developers responsibility to run the `npm install`.  The benefit of doing it this way is that the generator will scaffold out the project faster.
+
+    After the project is created, it's the developer's responsibility to run `npm install`.  The benefit of doing it this way is that the generator will scaffold the project faster.
 
 ## Install Local Certificate
 
