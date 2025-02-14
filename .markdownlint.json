@@ -1,5 +1,6 @@
 {
   "MD033": false,
   "MD038": false,
-  "MD013": false
+  "MD013": false,
+  "MD046": { "style": "indented" }
 }
