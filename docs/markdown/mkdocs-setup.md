@@ -35,9 +35,21 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
     [Material for MkDocs Documentation](https://squidfunk.github.io/mkdocs-material/)
 
-    ```cmd title="Windows cmd"
+    ```cmd title="Install"
     pip install mkdocs-material
+
+    // Install a specific version
+    pip install mkdocs-material=="9.*"
     ```
+
+    ```cmd title="Check version"
+    pip show mkdocs-material
+    ```
+
+    ```cmd title="Upgrade"
+    pip install --upgrade --force-reinstall mkdocs-material
+    ```
+
 === ":fontawesome-brands-markdown: **MkDocs**"
 
     ## MkDocs
