@@ -12,7 +12,7 @@
 
 ## NVM Setup and Commands
 
-[NVM](../../node/nvm.md)
+[NVM](/node/nvm.md)
 
 ## Check global packages installed
 
