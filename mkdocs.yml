@@ -1,4 +1,5 @@
 site_name: Code Blotter
+site_url: https://dropack.github.io/mkdocs-notebook/
 theme:
   name: material
   features:
