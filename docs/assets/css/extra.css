@@ -3,3 +3,52 @@ mark {
   background-color: yellow;
   color: black;
 }
+
+.error-stickyfooter {
+  min-height: calc(100vh - 195px);
+}
+
+.error-typeset {
+  color: var(--md-primary-fg-color);
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-h1 {
+  margin: 1rem;
+  font-size: 15em;
+  font-weight: 700;
+  text-shadow: #008000 4px 4px;
+}
+
+.error-p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.error-button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.error-button:hover {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-primary-bg-color);
+}

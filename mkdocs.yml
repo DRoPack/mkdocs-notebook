@@ -2,6 +2,7 @@ site_name: Code Blotter
 site_url: https://dropack.github.io/mkdocs-notebook/
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.indexes
