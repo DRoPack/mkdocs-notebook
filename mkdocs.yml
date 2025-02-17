@@ -66,14 +66,14 @@ markdown_extensions:
       toc_depth: 3
 
 extra_javascript:
-  - assets/js/custom_toc.js
-  - assets/js/custom_fences.js
+  - /mkdocs-notebook/assets/js/custom_toc.js
+  - /mkdocs-notebook/assets/js/custom_fences.js
 
 extra_css:
-  - assets/css/custom_toc.css
-  - assets/css/http-admonitions.css
-  - assets/css/custom_fences.css
-  - assets/css/extra.css
+  - /mkdocs-notebook/assets/css/custom_toc.css
+  - /mkdocs-notebook/assets/css/http-admonitions.css
+  - /mkdocs-notebook/assets/css/custom_fences.css
+  - /mkdocs-notebook/assets/css/extra.css
 
 nav:
   - Home: "index.md"
