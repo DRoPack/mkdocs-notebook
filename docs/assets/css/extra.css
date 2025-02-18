@@ -52,3 +52,7 @@ mark {
   background-color: var(--md-accent-fg-color);
   color: var(--md-primary-bg-color);
 }
+
+.greenCheck {
+  color: #00e676;
+}

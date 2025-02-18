@@ -6,22 +6,23 @@
 
 NVM allows you to install different versions of Node, and switch between these versions depending on the project that you're working on via the command line.
 
-!!! warn ""
-  Before proceeding, It is recommend that you uninstall Node.js if you have it installed already.<br> This will prevent any conflicts with Node.js and nvm.
+!!! warn "Previous Node Install"
+  
+    Before proceeding, It is recommend that you uninstall Node.js if you have it installed already. This will prevent any conflicts with Node.js and nvm.
 
 ## NVM Commands
 
 | Command   | Description |
 | --- | --- |
-| - [x] nvm | -v - Get Version |
-| - [x] nvm | list - List all versions of Node installed |
-| - [x] nvm | install latest - install the latest |
-| - [x] nvm | install lts - install long term supported version |
-| - [x] nvm | install X.Y.Z - install a specific version |
-| - [x] nvm | use X.Y.Z - switch to a specific version |
-| - [x] nvm | alias default X.Y.Z - make default node version |
-| - [x] nvm | on/off - turns nvm on or off |
-| - [x] nvm | uninstall X.Y.Z |
+| :octicons-check-circle-fill-12:{ .greenCheck }  nvm -v | get Version |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm list | list all versions of Node installed |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm install latest | install the latest |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm install lts | install long term supported version |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm install X.Y.Z | install a specific version |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm use X.Y.Z | switch to a specific version |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm alias default X.Y.Z | make default node version |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm on/off | turns nvm on or off |
+| :octicons-check-circle-fill-12:{ .greenCheck } nvm uninstall X.Y.Z |
 
 ## Install Dependencies
 
