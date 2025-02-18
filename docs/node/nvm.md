@@ -5,8 +5,6 @@
 ## What is NVM?
 
 NVM allows you to install different versions of Node, and switch between these versions depending on the project that you're working on via the command line.
-In the next sections, I'll show you how to install NVM on your Windows, Linux, or Mac device.
-Before proceeding, It is recommend that you uninstall Node.js if you have it installed already so that you do not have any conflicts with Node.js and nvm.
 
 !!! warn ""
   Before proceeding, It is recommend that you uninstall Node.js if you have it installed already.<br> This will prevent any conflicts with Node.js and nvm.
