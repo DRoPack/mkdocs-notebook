@@ -65,9 +65,14 @@ git push origin --delete <branch-name>  # Delete a branch from the remote reposi
 
 ```sh
 
-git reset -- hard                       # Reset local changes  
-# Use if local repo not sync'd remote repository after rebase
+git reset --hard                       # Discard all local changes (unstaged and staged)  
+# Use if the local repo is out of sync with the remote after a rebase  
 
+git reset --hard HEAD~1                # Undo the last commit and reset to the previous state  
+git push origin --force                # Force push to remove the last commit from the remote  
+
+git reflog                             # Show history of HEAD movements (useful for recovery)  
+git reset --hard <commit-hash>         # Restore to a previous commit found in reflog  
 ```
 
 ## Staging Exclude Folder/File
