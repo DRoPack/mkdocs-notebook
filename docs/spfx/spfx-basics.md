@@ -5,13 +5,13 @@ Open `cmd` command prompt
 ## NVM
 
 ```cmd title="Verify NVM Setup"
-C:\Users\Mdroschak> nvm list
+C:\Users\blotter> nvm list
 ```
 
 ![screenshot](../assets/img/spfx/image.png)
 
 ```cmd title="Verify NPM Packages"
-C:\Users\Mdroschak> npm list -g --depth=0
+C:\Users\blotter> npm list -g --depth=0
 ```
 
 ![screenshot](../assets/img/spfx/image-1.png)
@@ -19,21 +19,21 @@ C:\Users\Mdroschak> npm list -g --depth=0
 ## Create Project Folder
 
 ```cmd title="Navigating Folders"
-C:\Users\Mdroschak> cd repos
+C:\Users\blotter> cd repos
 ```
 
 ```cmd title="Create Project Directory"
-C:\Users\Mdroschak\repos> mkdir demoproject
+C:\Users\blotter\repos> mkdir demoproject
 ```
 
 ```cmd title="Navigate to new Project Directory"
-C:\Users\Mdroschak\repos> cd demoproject
+C:\Users\blotter\repos> cd demoproject
 ```
 
 ## Creating SharePoint Project
 
 ```cmd title="Run Yeoman Generator"
-C:\Users\Mdroschak\repos\demoproject> yo @microsoft/sharepoint
+C:\Users\blotter\repos\demoproject> yo @microsoft/sharepoint
 ```
 
 ![screenshot](../assets/img/spfx/image-2.png)
@@ -51,7 +51,7 @@ C:\Users\Mdroschak\repos\demoproject> yo @microsoft/sharepoint
 ## Install Development Certificate
 
 ```cmd title="Install Development Certificate"
-C:\Users\Mdroschak\repos\demoproject> gulp trust-dev-cert
+C:\Users\blotter\repos\demoproject> gulp trust-dev-cert
 ```
 
 !!! note
