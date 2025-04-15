@@ -2,7 +2,7 @@
 
 Incoming webhooks are a simple way to post messages from apps into Slack. When you create an incoming webhook, Slack provides a unique URL to which you send a JSON payload containing the message and formatting options. These webhooks support all standard formatting and layout blocks for rich message content.
 
-### 1. Create a Slack App
+### Create a Slack App
 
 First, [create a Slack app](https://api.slack.com/apps):
 
@@ -12,7 +12,7 @@ First, [create a Slack app](https://api.slack.com/apps):
 
 Once your app is created, you'll be redirected to its settings page.
 
-### 2. Enable Incoming Webhooks
+### Enable Incoming Webhooks
 
 From your app's settings:
 
@@ -22,7 +22,7 @@ From your app's settings:
 Manage existing apps:
 [App Management Dashboard](https://api.slack.com/apps)
 
-### 3. Create an Incoming Webhook
+### Create an Incoming Webhook
 
 With webhooks enabled, new options appear:
 
@@ -43,7 +43,7 @@ This URL is specific to your app and the channel you selected.
 !!! danger
     **Do not share** your webhook URL publicly. It is a secret and can be used to post to your Slack workspace.
 
-### 4. Send a Message
+### Send a Message
 
 To post a message using your webhook, make an HTTP POST request with a JSON body.
 
