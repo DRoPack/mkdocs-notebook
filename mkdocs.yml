@@ -133,6 +133,9 @@ nav:
           - Terminal Config: "terminal/terminal-config.md"
           - CMD Reference: "terminal/cmd-reference.md"
           - Winget: "terminal/winget.md"
+      - Slack:
+          - "slack/index.md"
+          - "slack/webhooks.md"
   - TODO: "research/todo.md"
 
 copyright: © 2025 <a href="#" target="blank">DRoPack</a>
