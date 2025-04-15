@@ -1,0 +1,201 @@
+:root {
+  --GET: #61affe;
+  --POST: #49cc90;
+  --PUT: #fca130;
+  --PATCH: #af01d9;
+  --DELETE: #f93e3e;
+}
+
+/* Reference to custom-fences.md page */
+.method--button {
+  background: #000;
+  border-radius: 3px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 80px;
+  padding: 6px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.method--get {
+  background-color: var(--GET);
+}
+.method--post {
+  background-color: var(--POST);
+}
+.method--put {
+  background-color: var(--PUT);
+}
+.method--patch {
+  background-color: var(--PATCH);
+}
+.method--delete {
+  background-color: var(--DELETE);
+}
+
+/*  Above has no usage in the custom fences */
+
+.swagger-ui {
+  color: #3b4151;
+  font-family: sans-serif
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */;
+}
+
+.swagger-ui .opblock .opblock-summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+}
+
+.swagger-ui .opblock-summary-control {
+  all: inherit;
+  border-bottom: 0;
+  cursor: pointer;
+  flex: 1;
+  padding: 0;
+}
+
+.swagger-ui .opblock .opblock-summary-path {
+  align-items: center;
+  color: #3b4151;
+  display: flex;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 5px 0 10px;
+  word-break: break-word;
+}
+
+.swagger-ui .opblock .opblock-summary-path {
+  flex-shrink: 0;
+  max-width: calc(100% - 100px);
+}
+
+.swagger-ui .opblock-summary-path code {
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.swagger-ui .opblock {
+  border: 1px solid #000;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.19);
+}
+
+.swagger-ui .opblock.opblock-get {
+  border-color: var(--GET);
+  background: rgba(97, 175, 254, 0.1);
+}
+
+.swagger-ui .opblock.opblock-post {
+  border-color: var(--POST);
+  background: rgba(73, 204, 144, 0.1);
+}
+
+.swagger-ui .opblock.opblock-put {
+  border-color: var(--PUT);
+  background: rgba(252, 161, 48, 0.1);
+}
+
+.swagger-ui .opblock.opblock-patch {
+  border-color: var(--patch);
+  background: rgba(127, 17, 224, 0.1);
+}
+
+.swagger-ui .opblock.opblock-delete {
+  border-color: var(--DELETE);
+  background: rgba(249, 62, 62, 0.1);
+}
+
+.swagger-ui .opblock-summary-method {
+  background: #000;
+  border-radius: 3px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 80px;
+  padding: 6px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+  background: var(--GET);
+}
+
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+  background: var(--POST);
+}
+
+.swagger-ui .opblock.opblock-put .opblock-summary-method {
+  background: var(--PUT);
+}
+
+.swagger-ui .opblock.opblock-patch .opblock-summary-method {
+  background: var(--PATCH);
+}
+
+.swagger-ui .opblock.opblock-delete .opblock-summary-method {
+  background: var(--DELETE);
+}
+
+.swagger-ui .md-clipboard {
+  color: var(--md-default-fg-color--darkest);
+}
+
+.swagger-ui .opblock-summary-path,
+pre code {
+  width: 100%;
+}
+
+.opblock-request-body {
+  width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.opblock-section-header {
+  padding-left: 0.25rem;
+}
+
+.swagger-ui .opblock-section-request {
+  display: flex;
+  align-items: center;
+}
+
+.request-label-container {
+  display: flex;
+  align-items: center;
+}
+
+.swagger-ui pre,
+.swagger-ui code {
+  white-space: pre-line;
+}
+
+.swagger-ui .opblock-body {
+  display: none;
+  flex-direction: column;
+}
+
+.opblock-body.visible {
+  display: flex;
+}
+
+.opblock-request-body pre {
+  margin: 0;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
