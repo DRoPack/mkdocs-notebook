@@ -34,9 +34,9 @@ Slack will redirect you back to the app settings, where a webhook URL will now a
 
 Example URL:
 
-    ```http
-    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-    ```
+``` http
+https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+```
 
 This URL is specific to your app and the channel you selected.
 
@@ -49,14 +49,14 @@ To post a message using your webhook, make an HTTP POST request with a JSON body
 
 Example:
 
-    ```http
-    POST https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-    Content-type: application/json
+``` http
+POST https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+Content-type: application/json
 
-    {
-        "text": "Hello, world."
-    }
-    ```
+{
+    "text": "Hello, world."
+}
+```
 
 ---
 
