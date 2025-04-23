@@ -2,8 +2,8 @@
 
 <div class="grid cards" markdown>
 
-- :material-slack: { style="color:#7c0480" } [**Webhooks**][webhooks]
-- :material-slack: { style="color:#3eb991" } [**Message Builder**][block-kit-builder]
+- :material-slack:{ style="color: #7c0480" } [**Webhooks**][webhooks]
+- :material-slack:{ style="color: #3eb991" } [**Message Builder**][block-kit-builder]
 
 </div>
 
