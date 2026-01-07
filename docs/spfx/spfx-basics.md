@@ -2,13 +2,21 @@
 
 Open `cmd` command prompt
 
-## NVM
+## FNM
 
-```cmd title="Verify NVM Setup"
-C:\Users\blotter> nvm list
+```cmd title="Verify FNM Setup"
+C:\Users\blotter> fnm list
 ```
 
 ![screenshot](../assets/img/spfx/image.png)
+
+```cmd title="Switch node version"
+C:\Users\blotter> fnm use 8.17.0
+```
+
+![screenshot](../assets/img/spfx/image-11.png)
+
+## NPM
 
 ```cmd title="Verify NPM Packages"
 C:\Users\blotter> npm list -g --depth=0
