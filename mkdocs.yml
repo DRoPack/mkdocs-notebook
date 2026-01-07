@@ -121,6 +121,8 @@ nav:
           - Git Cheatsheet: "git/git-cheatsheet.md"
       - Node:
           - "node/index.md"
+          - FNM Setup: "node/fnm-setup.md"
+          - FNM Commands: "node/fnm-commands.md"
           - NVM: "node/nvm.md"
       - NPM:
           - "npm/index.md"
