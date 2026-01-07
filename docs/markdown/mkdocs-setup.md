@@ -11,10 +11,10 @@ MkDocs requires **`Python`** and the Python package manager (**`pip`**) installe
 After install check installation of `Python` from the command line
 
 ```cmd title="Windows cmd"
-$ python --version
+python --version
 Python 3.12.3
 
-$ pip --version
+pip --version
 pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
 ```
 
@@ -100,7 +100,7 @@ cd my-project
     python -m venv venv
 
     # Activate the virtual environment
-    .venv\Scripts\activate.bat
+    venv\Scripts\activate.bat
     ```
 
 === ":material-git: **Git Bash**"
@@ -110,7 +110,7 @@ cd my-project
     python -m venv venv
 
     # Activate the virtual environment
-    source .venv/bin/activate
+    source venv/bin/activate
     ```
 
 === ":fontawesome-brands-linux: **Linux/macOS**"
