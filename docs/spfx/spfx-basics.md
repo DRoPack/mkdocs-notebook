@@ -14,6 +14,17 @@ C:\Users\blotter> fnm list
 C:\Users\blotter> fnm use 8.17.0
 ```
 
+!!! tip "Project Node Version"
+    Create a `.node-version` file in the project root to ensure the correct `Node`
+    version is automatically selected when entering the directory.
+
+    ```cmd
+    .node-version
+    ─────────────
+    8.17.0
+    ```
+    With `fnm env --use-on-cd` configured, `fnm` automatically switches node versions
+
 ![screenshot](../assets/img/spfx/image-11.png)
 
 ## NPM
