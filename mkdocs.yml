@@ -137,6 +137,9 @@ nav:
       - Slack:
           - 'slack/index.md'
           - 'slack/webhooks.md'
+  - Courses: 
+       - 'courses/index.md'
+       - MOSH AI: 'courses/mosh-ai.md'
   - TODO: 'research/todo.md'
 
 copyright: © 2025 <a href="#" target="blank">DRoPack</a>
