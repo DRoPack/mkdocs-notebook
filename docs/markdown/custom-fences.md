@@ -53,7 +53,7 @@ Toggle the arrow to the right of the endpoint path to display the header and bod
 
 The first line should contain 3 backtick (`) characters followed by httpCall, then the last line should contain the same number of backticks.
 
-```
+```md
     ```httpCall
 
     ```
@@ -73,7 +73,7 @@ Next to construct the body of the `httpCall` code block, we will be covering:
 
 To pick the method of the HTTP call, write `method=<method>` on the next line of the code block.  The options for `<method>` are GET, POST, PUT, PATCH, and DELETE.  If the method line is skipped, it will default to GET.  
 
-```
+```md
     ```httpCall
 
        method=DELETE
@@ -93,7 +93,7 @@ To pick the method of the HTTP call, write `method=<method>` on the next line of
 
 Next type`path`, then on the next line enter the api endpoint.
 
-```
+```md
     ```httpCall
 
        method=DELETE
@@ -108,7 +108,7 @@ Next type`path`, then on the next line enter the api endpoint.
 
 Type `header`, then on the next line enter header information. This is optional, if left blank the header section will not appear in the custom fence layout.
 
-```
+```md
     ```httpCall
 
        method=DELETE
@@ -128,7 +128,7 @@ Type `header`, then on the next line enter header information. This is optional,
 
 Type `body`, then on the next line enter the body information.  This is optional, if left blank the body section will not appear in the custom fence layout.
 
-```
+```md
     ```httpCall
 
        method=DELETE
@@ -210,7 +210,7 @@ While configuring the custom fences, the following error was encounter both loca
 
 Updating the GitHub Actions Workflow for MkDocs Deployment
 
-Update your `.github/workflows/deploy.yml` workflow file to ensure it correctly handles dependencies and sets the `PYTHONPATH` to include your custom module. Here’s how you can modify your existing `.github/workflows/deploy.yml`:
+Update your `.github/workflows/ci.yml` workflow file to ensure it correctly handles dependencies and sets the `PYTHONPATH` to include your custom module. Here’s how you can modify your existing `.github/workflows/ci.yml`:
 
 1. **Add a `requirements.txt` file**:
     - Create a `requirements.txt` file in the root of your repository (if you haven’t already) with the necessary dependencies:
