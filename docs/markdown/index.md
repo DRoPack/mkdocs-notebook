@@ -3,7 +3,7 @@
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-markdown: [**Markdown Basics**][markdown-basics]
-- :logo: [**MkDocs Setup**][mkdocs-setup]
+- :simple-materialformkdocs: [**MkDocs Setup**][mkdocs-setup]
 
 </div>
 
