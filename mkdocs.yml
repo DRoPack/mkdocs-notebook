@@ -10,9 +10,7 @@ theme:
     - navigation.path
     - navigation.instant
     - navigation.instant.progress
-    - search.suggest
-    - search.tabs.link
-    - content.code.annotation
+    - search.highlight
     - content.code.copy
     # - toc.integrate
     - toc.follow
@@ -60,14 +58,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
   - toc:
       toc_depth: 3
 
 extra_javascript:
-  - /mkdocs-notebook/assets/js/custom_toc.js
-  - /mkdocs-notebook/assets/js/custom_fences.js
+  - /mkdocs-notebook/assets/js/custom_toc.js?v=1
+  - /mkdocs-notebook/assets/js/custom_fences.js?v=1
 
 extra_css:
   - /mkdocs-notebook/assets/css/custom_toc.css
@@ -76,69 +74,69 @@ extra_css:
   - /mkdocs-notebook/assets/css/extra.css
 
 nav:
-  - Home: "index.md"
+  - Home: 'index.md'
   - Knowledge Base:
       - Markdown:
-          - "markdown/index.md"
-          - Markdown Basics: "markdown/markdown-basics.md"
-          - MkDocs Setup: "markdown/mkdocs-setup.md"
-          - Custom Fences: "markdown/custom-fences.md"
+          - 'markdown/index.md'
+          - Markdown Basics: 'markdown/markdown-basics.md'
+          - MkDocs Setup: 'markdown/mkdocs-setup.md'
+          - Custom Fences: 'markdown/custom-fences.md'
       - JavaScript:
-          - "javascript/index.md"
-          - "javascript/fetch.md"
+          - 'javascript/index.md'
+          - 'javascript/fetch.md'
       # - HTML:
       #     - "html/index.md"
       - SPFx:
-          - "spfx/index.md"
-          - Resources: "spfx/spfx-resources.md"
-          - Setup: "spfx/spfx-setup.md"
-          - Basics: "spfx/spfx-basics.md"
-          - Publishing: "spfx/spfx-publishing.md"
-          - CSS: "spfx/spfx-css.md"
-          - Kendo JQuery: "spfx/spfx-kendo-jquery.md"
-          - Linting: "spfx/spfx-linting.md"
+          - 'spfx/index.md'
+          - Resources: 'spfx/spfx-resources.md'
+          - Setup: 'spfx/spfx-setup.md'
+          - Basics: 'spfx/spfx-basics.md'
+          - Publishing: 'spfx/spfx-publishing.md'
+          - CSS: 'spfx/spfx-css.md'
+          - Kendo JQuery: 'spfx/spfx-kendo-jquery.md'
+          - Linting: 'spfx/spfx-linting.md'
       - CSS:
-          - "css/index.md"
-          - Attribute Selectors: "css/attribute-selectors.md"
-          - Combinators: "css/combinators.md"
-          - Pseudo Selectors: "css/pseudo-selectors.md"
+          - 'css/index.md'
+          - Attribute Selectors: 'css/attribute-selectors.md'
+          - Combinators: 'css/combinators.md'
+          - Pseudo Selectors: 'css/pseudo-selectors.md'
       - Microsoft:
-          - "microsoft/index.md"
+          - 'microsoft/index.md'
           - Rest API:
-              - "microsoft/rest-api/index.md"
-              - Rest API: "microsoft/rest-api/rest-api.md"
+              - 'microsoft/rest-api/index.md'
+              - Rest API: 'microsoft/rest-api/rest-api.md'
           - SharePoint:
-              - "microsoft/sharepoint/index.md"
+              - 'microsoft/sharepoint/index.md'
               - Administration:
-                  - "microsoft/sharepoint/administration/index.md"
-                  - Patching: "microsoft/sharepoint/administration/patching.md"
-              - Web Parts: "microsoft/sharepoint/webparts.md"
-              - Query Parameters: "microsoft/sharepoint/query-parameters.md"
+                  - 'microsoft/sharepoint/administration/index.md'
+                  - Patching: 'microsoft/sharepoint/administration/patching.md'
+              - Web Parts: 'microsoft/sharepoint/webparts.md'
+              - Query Parameters: 'microsoft/sharepoint/query-parameters.md'
           - Power Automate:
-              - "microsoft/power-automate/index.md"
+              - 'microsoft/power-automate/index.md'
       - Git:
-          - "git/index.md"
-          - Git Cheatsheet: "git/git-cheatsheet.md"
+          - 'git/index.md'
+          - Git Cheatsheet: 'git/git-cheatsheet.md'
       - Node:
-          - "node/index.md"
-          - FNM Setup: "node/fnm-setup.md"
-          - FNM Commands: "node/fnm-commands.md"
-          - NVM: "node/nvm.md"
+          - 'node/index.md'
+          - FNM Setup: 'node/fnm-setup.md'
+          - FNM Commands: 'node/fnm-commands.md'
+          - NVM: 'node/nvm.md'
       - NPM:
-          - "npm/index.md"
+          - 'npm/index.md'
       - PowerShell:
-          - "powershell/index.md"
+          - 'powershell/index.md'
           - PnP-PowerShell:
-              - "powershell/pnp-powershell/index.md"
-              - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
+              - 'powershell/pnp-powershell/index.md'
+              - PnP-SharePoint Template: 'powershell/pnp-powershell/pnp-sharepoint-template.md'
       - Terminal:
-          - "terminal/index.md"
-          - Terminal Config: "terminal/terminal-config.md"
-          - CMD Reference: "terminal/cmd-reference.md"
-          - Winget: "terminal/winget.md"
+          - 'terminal/index.md'
+          - Terminal Config: 'terminal/terminal-config.md'
+          - CMD Reference: 'terminal/cmd-reference.md'
+          - Winget: 'terminal/winget.md'
       - Slack:
-          - "slack/index.md"
-          - "slack/webhooks.md"
-  - TODO: "research/todo.md"
+          - 'slack/index.md'
+          - 'slack/webhooks.md'
+  - TODO: 'research/todo.md'
 
 copyright: © 2025 <a href="#" target="blank">DRoPack</a>
