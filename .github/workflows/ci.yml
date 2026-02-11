@@ -36,7 +36,7 @@ jobs:
 
       - name: Set PYTHONPATH
         run: |
-          echo "PYTHONPATH=${{ github.workspace }}/docs/assets/python" >> $GITHUB_ENV
+          echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
 
       # Build site with Zensical
       - name: Build site
