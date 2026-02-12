@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD046 -->
 # MkDocs
 
 `MkDocs` is a static site generator that provides a simplistic way for generating documentation written in `markdown`. `MkDocs` alone has a rich feature set of plugins and themes that will handle your documentation needs. However, the user community has contributed vastly to this project and added additional packages that can be installed to improve upon `MkDocs`. One of the most highly used packages is `Material for MkDocs`.
