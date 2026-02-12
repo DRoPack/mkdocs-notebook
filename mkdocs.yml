@@ -5,6 +5,7 @@ theme:
   custom_dir: overrides
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
     - navigation.path
@@ -137,9 +138,16 @@ nav:
       - Slack:
           - 'slack/index.md'
           - 'slack/webhooks.md'
-  - Courses: 
-       - 'courses/index.md'
-       - MOSH AI: 'courses/mosh-ai.md'
+  - Courses:
+      - 'courses/index.md'
+      - MOSH AI:
+          - 'courses/mosh-ai/index.md'
+          - Section 1: 'courses/mosh-ai/section1.md'
+          - Section 2: 'courses/mosh-ai/section2.md'
+          - Section 3: 'courses/mosh-ai/section3.md'
+          - Section 4: 'courses/mosh-ai/section4.md'
+          - Section 5: 'courses/mosh-ai/section5.md'
+          - Section 6: 'courses/mosh-ai/section6.md'
   - TODO: 'research/todo.md'
 
 copyright: © 2025 <a href="#" target="blank">DRoPack</a>
