@@ -1,7 +1,7 @@
 site_name: Code Blotter
 site_url: https://dropack.github.io/mkdocs-notebook/
 site_author: DRoPack
-copyright: "&copy; 2026 DRoPack"
+copyright: © 2026 <a href="#" target="blank">DRoPack</a>
 docs_dir: docs
 site_dir: site
 theme:
@@ -79,80 +79,99 @@ extra_css:
   - /mkdocs-notebook/assets/css/extra.css
 
 nav:
-  - Home: 'index.md'
-  - Knowledge Base:
-      - Markdown:
-          - 'markdown/index.md'
-          - Markdown Basics: 'markdown/markdown-basics.md'
-          - MkDocs Setup: 'markdown/mkdocs-setup.md'
-          - Custom Fences: 'markdown/custom-fences.md'
-      - JavaScript:
-          - 'javascript/index.md'
-          - 'javascript/fetch.md'
-      # - HTML:
-      #     - "html/index.md"
-      - SPFx:
-          - 'spfx/index.md'
-          - Resources: 'spfx/spfx-resources.md'
-          - Setup: 'spfx/spfx-setup.md'
-          - Basics: 'spfx/spfx-basics.md'
-          - Publishing: 'spfx/spfx-publishing.md'
-          - CSS: 'spfx/spfx-css.md'
-          - Kendo JQuery: 'spfx/spfx-kendo-jquery.md'
-          - Linting: 'spfx/spfx-linting.md'
-      - CSS:
-          - 'css/index.md'
-          - Attribute Selectors: 'css/attribute-selectors.md'
-          - Combinators: 'css/combinators.md'
-          - Pseudo Selectors: 'css/pseudo-selectors.md'
-      - Microsoft:
-          - 'microsoft/index.md'
-          - Rest API:
-              - 'microsoft/rest-api/index.md'
-              - Rest API: 'microsoft/rest-api/rest-api.md'
-          - SharePoint:
-              - 'microsoft/sharepoint/index.md'
-              - Administration:
-                  - 'microsoft/sharepoint/administration/index.md'
-                  - Patching: 'microsoft/sharepoint/administration/patching.md'
-              - Web Parts: 'microsoft/sharepoint/webparts.md'
-              - Query Parameters: 'microsoft/sharepoint/query-parameters.md'
-          - Power Automate:
-              - 'microsoft/power-automate/index.md'
-      - Git:
-          - 'git/index.md'
-          - Git Cheatsheet: 'git/git-cheatsheet.md'
-      - Node:
-          - 'node/index.md'
-          - FNM Setup: 'node/fnm-setup.md'
-          - FNM Commands: 'node/fnm-commands.md'
-          - NVM: 'node/nvm.md'
-      - NPM:
-          - 'npm/index.md'
-      - PowerShell:
-          - 'powershell/index.md'
-          - PnP-PowerShell:
-              - 'powershell/pnp-powershell/index.md'
-              - PnP-SharePoint Template: 'powershell/pnp-powershell/pnp-sharepoint-template.md'
-      - Terminal:
-          - 'terminal/index.md'
-          - Terminal Config: 'terminal/terminal-config.md'
-          - CMD Reference: 'terminal/cmd-reference.md'
-          - Winget: 'terminal/winget.md'
-      - Slack:
-          - 'slack/index.md'
-          - 'slack/webhooks.md'
-  - Courses:
-      - 'courses/index.md'
-      - MOSH AI:
-          - 'courses/mosh-ai/index.md'
-          - Section 1: 'courses/mosh-ai/section1.md'
-          - Section 2: 'courses/mosh-ai/section2.md'
-          - Section 3: 'courses/mosh-ai/section3.md'
-          - Section 4: 'courses/mosh-ai/section4.md'
-          - Section 5: 'courses/mosh-ai/section5.md'
-          - Section 6: 'courses/mosh-ai/section6.md'
-          - Section 7: 'courses/mosh-ai/section7.md'
-  - TODO: 'research/todo.md'
+  - Home: "index.md"
 
-copyright: © 2025 <a href="#" target="blank">DRoPack</a>
+  - Knowledge Base:
+    - Markdown:
+      - "markdown/index.md"
+      - Markdown Basics: "markdown/markdown-basics.md"
+      - MkDocs Setup: "markdown/mkdocs-setup.md"
+      - Custom Fences: "markdown/custom-fences.md"
+
+    - JavaScript:
+      - "javascript/index.md"
+      - "javascript/fetch.md"
+
+    # - HTML:
+    #   - "html/index.md"
+
+    - SPFx:
+      - "spfx/index.md"
+      - Resources: "spfx/spfx-resources.md"
+      - Setup: "spfx/spfx-setup.md"
+      - Basics: "spfx/spfx-basics.md"
+      - Publishing: "spfx/spfx-publishing.md"
+      - CSS: "spfx/spfx-css.md"
+      - Kendo JQuery: "spfx/spfx-kendo-jquery.md"
+      - Linting: "spfx/spfx-linting.md"
+
+    - CSS:
+      - "css/index.md"
+      - Attribute Selectors: "css/attribute-selectors.md"
+      - Combinators: "css/combinators.md"
+      - Pseudo Selectors: "css/pseudo-selectors.md"
+
+    - Microsoft:
+      - "microsoft/index.md"
+
+      - Rest API:
+        - "microsoft/rest-api/index.md"
+        - Rest API: "microsoft/rest-api/rest-api.md"
+
+      - SharePoint:
+        - "microsoft/sharepoint/index.md"
+
+        - Administration:
+          - "microsoft/sharepoint/administration/index.md"
+          - Patching: "microsoft/sharepoint/administration/patching.md"
+
+        - Web Parts: "microsoft/sharepoint/webparts.md"
+        - Query Parameters: "microsoft/sharepoint/query-parameters.md"
+
+      - Power Automate:
+        - "microsoft/power-automate/index.md"
+
+    - Git:
+      - "git/index.md"
+      - Git Cheatsheet: "git/git-cheatsheet.md"
+
+    - Node:
+      - "node/index.md"
+      - FNM Setup: "node/fnm-setup.md"
+      - FNM Commands: "node/fnm-commands.md"
+      - NVM: "node/nvm.md"
+
+    - NPM:
+      - "npm/index.md"
+
+    - PowerShell:
+      - "powershell/index.md"
+
+      - PnP-PowerShell:
+        - "powershell/pnp-powershell/index.md"
+        - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
+
+    - Terminal:
+      - "terminal/index.md"
+      - Terminal Config: "terminal/terminal-config.md"
+      - CMD Reference: "terminal/cmd-reference.md"
+      - Winget: "terminal/winget.md"
+
+    - Slack:
+      - "slack/index.md"
+      - "slack/webhooks.md"
+
+  - Courses:
+    - "courses/index.md"
+
+    - MOSH AI:
+      - "courses/mosh-ai/index.md"
+      - Section 1: "courses/mosh-ai/section1.md"
+      - Section 2: "courses/mosh-ai/section2.md"
+      - Section 3: "courses/mosh-ai/section3.md"
+      - Section 4: "courses/mosh-ai/section4.md"
+      - Section 5: "courses/mosh-ai/section5.md"
+      - Section 6: "courses/mosh-ai/section6.md"
+      - Section 7: "courses/mosh-ai/section7.md"
+
+  - TODO: "research/todo.md"
