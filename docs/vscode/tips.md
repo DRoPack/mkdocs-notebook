@@ -4,13 +4,9 @@
 // In settings.json add
 "[markdown]": {
     "editor.quickSuggestions": {
-    "comments": "on",
-    "strings": "on",
-    "other": "on"
+      "other": "on",
+      "comments": "off",
+      "strings": "off",
+    }
 }
-}
-```
-
-```
-
 ```
