@@ -1,5 +1,9 @@
 site_name: Code Blotter
 site_url: https://dropack.github.io/mkdocs-notebook/
+site_author: DRoPack
+copyright: "&copy; 2026 DRoPack"
+docs_dir: docs
+site_dir: site
 theme:
   name: material
   custom_dir: overrides
