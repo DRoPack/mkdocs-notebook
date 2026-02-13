@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Courses
 
 <div class="grid cards" markdown>
@@ -6,4 +11,4 @@
 
 </div>
 
-[mosh-ai]: mosh-ai.md
+[mosh-ai]: mosh-ai/index.md
