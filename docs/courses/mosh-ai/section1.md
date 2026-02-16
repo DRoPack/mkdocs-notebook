@@ -16,7 +16,7 @@
 
 Learn what Large Language Models (LLM) are and how to work with them. Learn about tokens and context windows. This course is about setting up a modern full-stack project from scratch while keeping the back-end and front-end completely seperate. Along the way it will cover building a chatbot and a review summarizer. Delve into prompt engineering to steamline response to be more concise and accurate.
 
-#### Use a modern stack:
+#### Use a modern stack
 
 <div class="grid cards" markdown>
 
