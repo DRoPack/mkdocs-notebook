@@ -25,9 +25,11 @@ Unlike Node.js, BUN bundles several tools together out of the box:
 powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
+<!-- prettier-ignore-start -->
 !!! warning
-Important Note (Starting with BUN v1.3.2) isolated installs become the default.
-Mosh’s course uses **hoisted installs** (Node-style), so we need to explicitly enable that.
+    Important Note (Starting with BUN v1.3.2) isolated installs become the default.
+    Mosh’s course uses **hoisted installs** (Node-style), so we need to explicitly enable that.
+<!-- prettier-ignore-end -->
 
 - [x] <https://bun.com/docs/pm/cli/install#installation-strategies>
 
