@@ -1,7 +1,9 @@
-<!-- markdownlint-disable MD046 -->
-# MOSH AI Apps
+---
+title: Section 3 - Setting Up Modern Full Stack Project
+---
 
-## Section 3 - Setting Up Modern Full Stack Project
+<!-- markdownlint-disable MD046 -->
+<!-- markdownlint-disable MD007 -->
 
 ### Video 2 — What is BUN?
 
@@ -12,10 +14,10 @@ Unlike Node.js, BUN bundles several tools together out of the box:
 - ts-node
 - nodemon
 
-| Includes    |                      |
-|------------ |------------          |
-| Runtime     | Package Manager      |
-| Task Runner | TypeScript Transpiler|
+| Includes    |                       |
+| ----------- | --------------------- |
+| Runtime     | Package Manager       |
+| Task Runner | TypeScript Transpiler |
 
 - [x] <https://bun.sh>
 
@@ -24,8 +26,8 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
 !!! warning
-    Important Note (Starting with BUN v1.3.2) isolated installs become the default.
-    Mosh’s course uses **hoisted installs** (Node-style), so we need to explicitly enable that.
+Important Note (Starting with BUN v1.3.2) isolated installs become the default.
+Mosh’s course uses **hoisted installs** (Node-style), so we need to explicitly enable that.
 
 - [x] <https://bun.com/docs/pm/cli/install#installation-strategies>
 
@@ -39,50 +41,50 @@ bun install --linker hoisted
 
 1. Create the project folder
 
-    ```text
-    c:\repos\ai-apps\mosh-ai-app
-    ```
+   ```text
+   c:\repos\ai-apps\mosh-ai-app
+   ```
 
 2. Initialize BUN
 
-    ```bash
-    bun init
-    ```
+   ```bash
+   bun init
+   ```
 
 3. Select **Blank**
 
 4. Open in VS Code
 
-    ```bash
-    code .
-    ```
+   ```bash
+   code .
+   ```
 
 5. Delete the `cursor` file
 
 6. Create folders
 
-    ```text
-    packages/
-    packages/client
-    packages/server
-    ```
+   ```text
+   packages/
+   packages/client
+   packages/server
+   ```
 
 7. Update `package.json` with workspaces
 
-    === "Standard Syntax"
+   === "Standard Syntax"
 
-        ```json
-        "workspaces": [
-        "packages/client",
-        "packages/server"
-        ]
-        ```
+       ```json
+       "workspaces": [
+       "packages/client",
+       "packages/server"
+       ]
+       ```
 
-    === "Shorthand Syntax"
+   === "Shorthand Syntax"
 
-        ```json
-        "workspaces": ["packages/*"]
-        ```
+       ```json
+       "workspaces": ["packages/*"]
+       ```
 
 ---
 
@@ -113,10 +115,10 @@ Add scripts for running and developing:
 
 ```json
 {
-  "scripts": {
-    "start": "bun run index.ts",
-    "dev": "bun --watch run index.ts"
-  }
+ "scripts": {
+  "start": "bun run index.ts",
+  "dev": "bun --watch run index.ts"
+ }
 }
 ```
 
@@ -161,7 +163,7 @@ Add to `server/index.ts`:
 
 ```ts
 app.get('/api/hello', (req, res) => {
-  res.json({ message: "Hello World!" })
+ res.json({ message: 'Hello World!' });
 });
 ```
 
@@ -187,18 +189,18 @@ Create `index.ts` in the root:
 import concurrently from 'concurrently';
 
 concurrently([
-  {
-    name: 'server',
-    command: 'bun run dev',
-    cwd: 'packages/server',
-    prefixColor: 'cyan'
-  },
-  {
-    name: 'client',
-    command: 'bun run dev',
-    cwd: 'packages/client',
-    prefixColor: 'green'
-  }
+ {
+  name: 'server',
+  command: 'bun run dev',
+  cwd: 'packages/server',
+  prefixColor: 'cyan',
+ },
+ {
+  name: 'client',
+  command: 'bun run dev',
+  cwd: 'packages/client',
+  prefixColor: 'green',
+ },
 ]);
 ```
 
@@ -226,13 +228,13 @@ Update `vite.config.ts`:
 ```ts
 import tailwindcss from '@tailwindcss/vite';
 
-plugins: [react(), tailwindcss()]
+plugins: [react(), tailwindcss()];
 ```
 
 Update `index.css`:
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 ```
 
 VS Code Extension:
@@ -242,7 +244,7 @@ VS Code Extension:
 Update `App.tsx`:
 
 ```tsx
-return <p className="font-bold">{message}</p>
+return <p className="font-bold">{message}</p>;
 ```
 
 ---
@@ -306,10 +308,10 @@ Update `App.tsx`:
 
 ```tsx
 return (
-  <div className="p-4">
-    <p className="font-bold text-3xl">{message}</p>
-    <Button>Click Me</Button>
-  </div>
+ <div className="p-4">
+  <p className="font-bold text-3xl">{message}</p>
+  <Button>Click Me</Button>
+ </div>
 );
 ```
 
@@ -322,11 +324,11 @@ return (
 
 ```json
 {
-  "singleQuote": true,
-  "semi": true,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "tabWidth": 3
+ "singleQuote": true,
+ "semi": true,
+ "trailingComma": "es5",
+ "printWidth": 80,
+ "tabWidth": 3
 }
 ```
 
