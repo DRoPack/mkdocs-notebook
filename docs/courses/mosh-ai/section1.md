@@ -1,8 +1,9 @@
+---
+title: Section 1 - Getting Started
+---
+
 <!-- markdownlint-disable MD046 -->
-
-# MOSH AI Apps
-
-## Section 1 - Getting Started
+<!-- markdownlint-disable MD007 -->
 
 #### Prerequisites
 
