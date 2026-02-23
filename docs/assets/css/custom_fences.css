@@ -21,24 +21,6 @@
   margin-right: 10px;
 }
 
-.method--get {
-  background-color: var(--GET);
-}
-.method--post {
-  background-color: var(--POST);
-}
-.method--put {
-  background-color: var(--PUT);
-}
-.method--patch {
-  background-color: var(--PATCH);
-}
-.method--delete {
-  background-color: var(--DELETE);
-}
-
-/*  Above has no usage in the custom fences */
-
 .swagger-ui {
   color: #3b4151;
   font-family: sans-serif
@@ -69,9 +51,6 @@
   font-weight: 600;
   padding: 0 5px 0 10px;
   word-break: break-word;
-}
-
-.swagger-ui .opblock .opblock-summary-path {
   flex-shrink: 0;
   max-width: calc(100% - 100px);
 }
@@ -104,7 +83,7 @@
 }
 
 .swagger-ui .opblock.opblock-patch {
-  border-color: var(--patch);
+  border-color: var(--PATCH);
   background: rgba(127, 17, 224, 0.1);
 }
 
@@ -174,9 +153,8 @@ pre code {
   align-items: center;
 }
 
-.swagger-ui pre,
-.swagger-ui code {
-  white-space: pre-line;
+.swagger-ui pre {
+  white-space: pre-wrap;
 }
 
 .swagger-ui .opblock-body {

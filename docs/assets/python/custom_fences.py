@@ -36,6 +36,7 @@ def httpCall(source, language, class_name, options, md, **kwargs):
     path = ""
     headers = ""
     body = ""
+    response = ""
     
     # Iterate through each line and extract relevant sections
     current_section = None
@@ -46,17 +47,23 @@ def httpCall(source, language, class_name, options, md, **kwargs):
             current_section = 'header'
         elif line.strip().lower() == 'body':
             current_section = 'body'
+        elif line.strip().lower() == 'response':
+            current_section = 'response'
+
         elif current_section == 'path':
-            path += line.strip() + "\n"
+            path += line.rstrip() + "\n"
         elif current_section == 'header':
-            headers += line.strip() + "\n"
+            headers += line.rstrip() + "\n"
         elif current_section == 'body':
-            body += line.strip() + "\n"
+            body += line + "\n"
+        elif current_section == 'response':
+            response += line + "\n"
     
     # Remove trailing newlines from sections
     path = path.strip()
     headers = headers.strip()
-    body = body.strip()
+    body = body.rstrip()
+    response = response.rstrip()
 
     # Generating a unique ID for each input
     input_id = f"{generate_unique_id()}"
@@ -74,7 +81,7 @@ def httpCall(source, language, class_name, options, md, **kwargs):
         <div class="opblock-summary opblock-summary-{method.lower()}">
             <button class="opblock-summary-control"> 
                 <span class="opblock-summary-method">{method.upper()}</span>
-                <pre class="opblock-summary-path"><code class="lang-html">{path.strip()}</code></pre>
+                <pre class="opblock-summary-path"><code class="lang-html">{path}</code></pre>
                 <svg class="arrow" width="20" height="20" aria-hidden="true" focusable="false"xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
                 </svg>
@@ -97,7 +104,7 @@ def httpCall(source, language, class_name, options, md, **kwargs):
                 <div class="header-wrapper">
                     <div class="opblock-section-header">Headers</div>
                     <div class="opblock-request-body">
-                        <pre class="body-param"><code class="lang-json">{headers.strip()}</code></pre>
+                        <pre class="body-param"><code class="lang-json">{headers}</code></pre>
                     </div>
                 </div>
         """
@@ -107,9 +114,21 @@ def httpCall(source, language, class_name, options, md, **kwargs):
         html += f"""
         <!-- Body -->
                 <div class="header-wrapper">
-                    <div class="opblock-section-Body">Body</div>
+                    <div class="opblock-section-body">Body</div>
                     <div class="opblock-request-body">
-                        <pre class="body-param"><code class="lang-json">{body.strip()}</code></pre>
+                        <pre class="body-param"><code class="lang-json">{body}</code></pre>
+                    </div>
+                </div>
+        """
+
+    # Add response section if not empty
+    if response:
+        html += f"""
+        <!-- Response -->
+                <div class="header-wrapper">
+                    <div class="opblock-section-body">Response</div>
+                    <div class="opblock-request-body">
+                        <pre class="body-param"><code class="lang-json">{response}</code></pre>
                     </div>
                 </div>
         """
