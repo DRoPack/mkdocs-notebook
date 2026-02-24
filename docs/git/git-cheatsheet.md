@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD046 -->
+
 # Git Commands Cheatsheet
 
 ## GitHub Basics
@@ -22,6 +24,63 @@ git status || git status -s             # Status
 git log --oneline --all --graph         # Show linear graph of all local commits (q to exit)
 git ls-files                            # Display all files being tracked in Git
 
+```
+
+## Remotes
+
+```sh
+
+git remote                              # List remote names
+git remote -v                           # Show details of remotes
+git fetch upstream                      # Get updates from source repository (default origin)
+git switch master                       # Switch to master branch
+git merge upstream/master               # Merge new source changes with local files
+git push origin                         # Push merged changes to forked repository (GitHub)
+
+# Initialize New Repository and Push to Github
+1. Create a new repository on GitHub (without initializing it with README, .gitignore, etc..)
+2. Run the following commands in your local project folder:
+    git init                                # Initialize Git in local project
+    git remote add origin <repository-url>  # Add remote repository url
+    git add .                               # Add all files to staging
+    git commit -m "Initial commit"          # Commit staged files
+    git branch -M main                      # Rename the current branch to 'main' (force rename if necessary)
+    git push -u origin main                 # Push the branch and commits to the remote repository
+    git remote -v                           # Verify the remote connection
+
+```
+
+## Squash (WIP)
+
+!!! tip "Why use WIP commits?"
+
+    WIP commits let you safely checkpoint unfinished work.
+    You can clean them up later using interactive rebase.
+
+!!! warning
+
+    Only rewrite local commits. If already pushed, git push --force is required.
+
+```sh title="Combine Adjacent Commits"
+git rebase -i HEAD~2               # Rewrite last 2 commits
+
+pick a1a1a1 WIP: updating file1
+squash b2b2b2 WIP: updating file2  # Squash second commit into first
+```
+
+```sh title="Combine Non-Adjacent Commits"
+# Reorder commits - must be in sequential order
+git rebase -i HEAD~3               # Reorder and rewrite 2 commits
+
+pick a1a1a1 WIP: updating file1    # Commit 1
+squash c3c3c3 WIP: updating file3  # Commit 3
+pick b2b2b2                        # Commit 2
+```
+
+Verify clean history:
+
+```sh
+git log --oneline
 ```
 
 ## Stash
@@ -65,14 +124,14 @@ git push origin --delete <branch-name>  # Delete a branch from the remote reposi
 
 ```sh
 
-git reset --hard                       # Discard all local changes (unstaged and staged)  
-# Use if the local repo is out of sync with the remote after a rebase  
+git reset --hard                       # Discard all local changes (unstaged and staged)
+# Use if the local repo is out of sync with the remote after a rebase
 
-git reset --hard HEAD~1                # Undo the last commit and reset to the previous state  
-git push origin --force                # Force push to remove the last commit from the remote  
+git reset --hard HEAD~1                # Undo the last commit and reset to the previous state
+git push origin --force                # Force push to remove the last commit from the remote
 
-git reflog                             # Show history of HEAD movements (useful for recovery)  
-git reset --hard <commit-hash>         # Restore to a previous commit found in reflog  
+git reflog                             # Show history of HEAD movements (useful for recovery)
+git reset --hard <commit-hash>         # Restore to a previous commit found in reflog
 ```
 
 ## Staging Exclude Folder/File
@@ -93,30 +152,6 @@ git rm --cached -r logs/                # Remove folder and all contents (recurs
 
 ```
 
-## Remotes
-
-```sh
-
-git remote                              # List remote names
-git remote -v                           # Show details of remotes
-git fetch upstream                      # Get updates from source repository (default origin)
-git switch master                       # Switch to master branch
-git merge upstream/master               # Merge new source changes with local files
-git push origin                         # Push merged changes to forked repository (GitHub)
-
-# Initialize New Repository and Push to Github
-1. Create a new repository on GitHub (without initializing it with README, .gitignore, etc..)
-2. Run the following commands in your local project folder:
-    git init                                # Initialize Git in local project
-    git remote add origin <repository-url>  # Add remote repository url
-    git add .                               # Add all files to staging
-    git commit -m "Initial commit"          # Commit staged files
-    git branch -M main                      # Rename the current branch to 'main' (force rename if necessary)
-    git push -u origin main                 # Push the branch and commits to the remote repository
-    git remote -v                           # Verify the remote connection
-
-```
-
 ## Create Git Ignore
 
 ```sh
@@ -129,9 +164,8 @@ echo temp/ > .gitignore                 # Add folder to .gitignore
 ```
 
 !!! tip
-    - Can't create .gitignore file: Ensure file is UTF-8 encoded
-    - Files not removed from untracked once added to .gitignore: Ensure correct encoding
-    - Using echo in PowerShell terminal causes issue: Use Bash terminal or PowerShell cmdlet for adding content
+
+    Can't create .gitignore file: Ensure file is UTF-8 encoded - Files not removed from untracked once added to .gitignore: Ensure correct encoding - Using echo in PowerShell terminal causes issue: Use Bash terminal or PowerShell cmdlet for adding content
 
 ## Rename/Move
 
@@ -142,6 +176,7 @@ git docs/microsoft docs/tmp             # Rename folder
 
 ```
 
+<!-- prettier-ignore-start -->
 !!! tip
     GitHub is a case-sensitive environment.<br>
 
@@ -150,6 +185,7 @@ git docs/microsoft docs/tmp             # Rename folder
     For example:<br>
     `git docs/microsoft docs/tmp`, commit and push changes<br>
     `git docs/temp docs/microsoft`, commit and push changes
+<!-- prettier-ignore-end -->
 
 ## File Changes
 
