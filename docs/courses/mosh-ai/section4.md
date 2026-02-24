@@ -86,6 +86,56 @@ app.post('/api/chat', async (req: Request, res: Response) => {
     {
       "prompt": "What is the capital of France?"
     }
+
+    response
+    {
+    "assistantMessage": {
+        "id": "71b6bbf2d1a045998b2b09f87b5707d1",
+        "object": "chat.completion",
+        "created": 1771862809,
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Paris is the capital of France."
+                },
+                "finish_reason": "stop",
+                "content_filter_results": {
+                    "hate": {
+                        "filtered": false
+                    },
+                    "self_harm": {
+                        "filtered": false
+                    },
+                    "sexual": {
+                        "filtered": false
+                    },
+                    "violence": {
+                        "filtered": false
+                    },
+                    "jailbreak": {
+                        "filtered": false,
+                        "detected": false
+                    },
+                    "profanity": {
+                        "filtered": false,
+                        "detected": false
+                    }
+                }
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 41,
+            "completion_tokens": 34,
+            "total_tokens": 75,
+            "prompt_tokens_details": null,
+            "completion_tokens_details": null
+        },
+        "system_fingerprint": ""
+        }
+    }
 ```
 
 ## Video 2.3 - Managing Conversation State
@@ -124,4 +174,46 @@ app.post('/api/chat', async (req: Request, res: Response) => {
   assistantMessage,
  });
 });
+```
+
+## Video 2.4 - Input Validation
+
+<!-- prettier-ignore-start -->
+!!! Zod
+  
+    A TypeScript first validation library used in React and JavaScript
+<!-- prettier-ignore-end -->
+
+- Navigate to server folder and run add Zod
+
+```cmd title="Terminal"
+  cd packages/server
+
+  // Install Zod
+  bun add zod
+```
+
+- Set up Zod in server/index.ts
+
+```ts title="packages/server/index.ts" hl_lines="1 4-11 14-18"
+  import z from 'zod';
+
+  ....
+  const chatSchema = z.object({
+  prompt: z
+    .string()
+    .trim()
+    .min(1, 'Prompt is required')
+    .max(1000, 'Prompt is too long (max 1000 characters'),
+  conversationId: z.uuid,
+});
+
+app.post('/api/chat', async (req: Request, res: Response) => {
+  const parseResult = chatSchema.safeParse(req.body);
+  if (!parseResult.success) {
+    res.status(400).json(parseResult.error.format());
+    return;
+  }
+  ...
+}
 ```
