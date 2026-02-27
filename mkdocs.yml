@@ -17,6 +17,7 @@ theme:
     - navigation.instant.progress
     - search.highlight
     - content.code.copy
+    - content.code.annotate
     # - toc.integrate
     - toc.follow
   language: en
