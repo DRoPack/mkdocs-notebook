@@ -14,20 +14,22 @@ Creating multiple subscriptions provides clear separation of environments. For e
 
 ---
 
-- [Azure Portal](https://portal.azure.com/)
+:octicons-link-external-24: [Azure Portal](https://portal.azure.com/)
 
 ## Create Subscription
 
-!!! note "Permissions"
-To create subscriptions under a Microsoft Customer Agreement (MCA), you must have one of the following:
+<!-- prettier-ignore-start -->
+!!! info "Permissions"
+    To create subscriptions under a Microsoft Customer Agreement (MCA), you must have one of the following:
 
     - Owner or Contributor role on:
         - Invoice section
         - Billing profile
         - Billing account
     - **OR** the Azure subscription creator role
+<!-- prettier-ignore-end -->
 
-### Steps
+#### Steps
 
 1. Navigate to **Subscriptions**
 2. Select **+ Add**
