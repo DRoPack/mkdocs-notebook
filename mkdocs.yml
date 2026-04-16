@@ -112,6 +112,11 @@ nav:
           - Combinators: "css/combinators.md"
           - Pseudo Selectors: "css/pseudo-selectors.md"
 
+      - Azure:
+          - "azure/index.md"
+          - Subscription: "azure/subscription/index.md"
+          - App Services: "azure/app-services/index.md"
+
       - Microsoft:
           - "microsoft/index.md"
 
