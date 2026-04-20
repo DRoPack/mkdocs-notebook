@@ -2,7 +2,7 @@
   "singleQuote": true,
   "semi": true,
   "trailingComma": "es5",
-  "printWidth": 80,
+  "printWidth": 100,
   "useTabs": false,
   "tabWidth": 2,
   "proseWrap": "preserve",
@@ -10,7 +10,7 @@
   "overrides": [
     {
       "files": "*.md",
-      "options": { "tabWidth": 1 }
+      "options": { "tabWidth": 2 }
     },
     {
       "files": ["*.yml", "*.yaml"],
