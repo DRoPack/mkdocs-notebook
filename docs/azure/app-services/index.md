@@ -9,7 +9,7 @@ Azure App Service is a fully managed platform as a service (PaaS) for building, 
 ## Prerequisites
 
 - Azure subscription
-- Access to the Azure Portal: :octicons-link-external-24: [Azure Portal](https://portal.azure.com/)
+- Access to the Azure Portal: [:octicons-link-external-24: Azure Portal](https://portal.azure.com/)
 - Basic understanding of your app (runtime, region, etc.)
 
 ---
@@ -95,3 +95,17 @@ After creation:
 - [x] Next step: deploy the add-in via [Microsoft 365 Integrated Apps][link-integrated-apps]
 
 [link-integrated-apps]: ../../central-admin/integrated-apps/index.md
+
+!!! note "App Service Environment (ASE) – Future Reference"
+
+    An App Service Environment (ASE) is a fully isolated, single-tenant hosting environment for Azure App Services.
+
+    It provides dedicated compute, network isolation (VNet integration), and enhanced security controls, but comes with significantly higher cost and operational complexity.
+
+    ASE should only be considered for highly regulated, security-sensitive, or large-scale enterprise scenarios requiring full network isolation.
+
+---
+
+### References
+
+[:octicons-link-external-24: Azure App Service in 8 Minutes by Emervese](https://youtu.be/CZQuvRTepX0?si=leIsm1azWWflxeyo)
