@@ -137,6 +137,10 @@ nav:
           - Power Automate:
               - "microsoft/power-automate/index.md"
 
+      - M365 Central Admin:
+          - "central-admin/index.md"
+          - Integrated Apps: "central-admin/integrated-apps/index.md"
+
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
