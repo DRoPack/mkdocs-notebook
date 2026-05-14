@@ -21,34 +21,6 @@ This is a quick reference guide for `fnm` (Fast Node Manager).
 
 ---
 
-## How to install
-
-### macOS and Linx
-
-Install FNM using the install script or Homebrew:
-
-```cmd
-# option 1: install script
-curl -fsSL https://fnm.vercel.app/install | bash
-
-# option 2: Homebrew
-brew install fnm
-```
-
-After installing, add the following to your shell profile (.zshrc, .bashrc, or .profile) to initialize FNM in each new terminal session:
-
-```cmd
-eval "$(fnm env)"
-```
-
-### Windows
-
-Install FNM using winget:
-
-```cmd
-winget install Schniz.fnm
-```
-
 ## Automatic version switching
 
 One of FNM’s standout features is automatic version switching. When you have a `.node-version` or `.nvmrc` file in your project’s root folder, FNM will automatically switch to the specified Node.js version when you navigate into that directory.
@@ -60,17 +32,6 @@ cd ~/dev/spfx-hello-world
 # create the version file
 node -v > .node-version
 ```
-
-## Migration Clean up
-
-After successfully migrating to FNM, make sure to clean up your old installation. This prevents conflicts and ensures a clean development environment.
-
-Delete your old .nvm folder:
-
-- On macOS: `rm -rf ~/.nvm`
-- On Windows: Remove the NVM installation directory (typically `C:\Users\<username>\AppData\Roaming\nvm`) and its associated nodejs symlink folder
-
-Also update your shell profile (.zshrc, .bashrc, or .profile) to remove the old NVM initialization scripts and add FNM instead.
 
 ## Additional Notes
 

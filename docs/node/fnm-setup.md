@@ -29,7 +29,9 @@ FNM is a faster, cross-platform alternative to NVM:
 
 ---
 
-## Install FNM (Using winget)
+### Windows
+
+Install FNM using winget:
 
 ```powershell
 winget install Schniz.fnm
@@ -38,8 +40,25 @@ winget install Schniz.fnm
 Verify installation:
 
 ```cmd
-fnm --version
+fnm -V
 ```
+
+### macOS and Linx
+
+Install FNM using the install script or Homebrew:
+
+```cmd
+# option 1: install script
+curl -fsSL https://fnm.vercel.app/install | bash
+
+# option 2: Homebrew
+brew install fnm
+```
+
+After installing, add the following to your shell profile (.zshrc, .bashrc, or .profile) to initialize FNM in each new terminal session:
+
+```cmd
+eval "$(fnm env)"
 
 ---
 
@@ -121,3 +140,14 @@ Invoke-Expression (&fnm env --use-on-cd)
 > ```
 
 Save and restart PowerShell to activate.
+
+## Migration Clean up
+
+After successfully migrating to FNM, make sure to clean up your old installation. This prevents conflicts and ensures a clean development environment.
+
+Delete your old .nvm folder:
+
+- On macOS: `rm -rf ~/.nvm`
+- On Windows: Remove the NVM installation directory (typically `C:\Users\<username>\AppData\Roaming\nvm`) and its associated nodejs symlink folder
+
+Also update your shell profile (.zshrc, .bashrc, or .profile) to remove the old NVM initialization scripts and add FNM instead.
