@@ -21,7 +21,7 @@ This is a quick reference guide for `fnm` (Fast Node Manager).
 
 ---
 
-## How to install $$
+## How to install
 
 ### macOS and Linx
 
