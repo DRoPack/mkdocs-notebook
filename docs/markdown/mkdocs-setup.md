@@ -127,6 +127,83 @@ cd my-project
 !!! note
     Reactivate an existing virtual environment by following the same instructions to activate.  There is no need to create a new virtual environment.
 
+??? failure "Troubleshooting"
+
+    In the event that Python and PiP isn't registering in your project.  The issue can occur when a virtual environment (`venv`) was created using an older Python installation and that installation was later upgraded, moved, or removed. The `pyvenv.cfg` file continues to reference the old Python executable, causing the virtual environment to fail.
+
+    === "Assess"
+
+        Notice that `python --version` references Python 3.12, while `where python` shows Python 3.14 exists on the system.
+
+        ```cmd title="Check Python Version"
+        python --version
+
+        No Python at 'c:\users\blotter\AppData\Local\Programs\Python\Python312'
+        ```
+
+        ```cmd title="Locate Python Executables"
+        where python
+
+        c:\users\blotter\AppData\Local\Programs\Python\Python314
+        ```
+
+    === "Confirm"
+
+        From the project root, inspect the virtual environment configuration.
+
+        ```cmd title="Inspect pyvenv.cfg"
+        type venv\pyvenv.cfg
+        ```
+
+        If the file references an older Python version, the virtual environment needs to be recreated.
+
+        ```text title="Example pyvenv.cfg Output"
+        home = c:\users\blotter\AppData\Local\Programs\Python\Python312
+        include-system-site-packages = false
+        version = 3.12.3
+        executable = c:\users\blotter\AppData\Local\Programs\Python\Python312\python.exe
+        command = c:\users\blotter\AppData\Local\Programs\Python\Python312\python.exe -m venv
+        ```
+
+    === "Fix"
+
+        Recreate the virtual environment using the currently installed version of Python.
+
+        ```cmd title="Deactivate Current Virtual Environment"
+        deactivate
+        ```
+
+        === ":fontawesome-brands-windows: **Windows CMD**"
+
+            ```cmd title="Delete Existing Virtual Environment"
+            rmdir /s /q venv
+            ```
+
+        === ":fontawesome-brands-windows: **PowerShell**"
+
+            ```powershell title="Delete Existing Virtual Environment"
+            Remove-Item .\venv -Recurse -Force
+            ```
+
+        === ":fontawesome-brands-git-alt: **Git Bash**"
+
+            ```bash title="Delete Existing Virtual Environment"
+            rm -rf venv
+            ```
+
+        ```cmd title="Create New Virtual Environment"
+        py -m venv venv
+        ```
+
+        ```cmd title="Verify"
+        python --version
+        pip --version
+        ```
+
+        ```cmd title="Confirm pyvenv.cfg"
+        type venv\pyvenv.cfg
+        ```
+
 ## Project layout
 
     mkdocs.yml    # The configuration file.
