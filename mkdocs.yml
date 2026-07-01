@@ -144,6 +144,7 @@ nav:
       - Git:
           - "git/index.md"
           - Git Cheatsheet: "git/git-cheatsheet.md"
+          - Git Commit: "git/git-commit.md"
 
       - Node:
           - "node/index.md"
@@ -164,7 +165,7 @@ nav:
       - Terminal:
           - "terminal/index.md"
           - Terminal Config: "terminal/terminal-config.md"
-          - CMD Reference: "terminal/cmd-reference.md"
+          - Terminal Reference: "terminal/terminal-reference.md"
           - Winget: "terminal/winget.md"
 
       - Slack:
