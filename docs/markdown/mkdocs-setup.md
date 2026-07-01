@@ -1,7 +1,15 @@
 <!-- markdownlint-disable MD046 -->
-# MkDocs
+# Zensical (MkDocs)
 
-`MkDocs` is a static site generator that provides a simplistic way for generating documentation written in `markdown`. `MkDocs` alone has a rich feature set of plugins and themes that will handle your documentation needs. However, the user community has contributed vastly to this project and added additional packages that can be installed to improve upon `MkDocs`. One of the most highly used packages is `Material for MkDocs`.
+`MkDocs` is a static site generator that provides a simplistic way for generating documentation written in `markdown`. `MkDocs` alone has a rich feature set of plugins and themes that will handle your documentation needs. However, the user community has contributed vastly to this project and added additional packages that can be installed to improve upon `MkDocs`. One of the most highly used packages is `Zensical`.
+
+
+!!! info "Name Change (2026)"
+
+    Material for MkDocs was rebranded to **Zensical** in 2026.
+
+    Existing documentation, package names, configuration settings, and community resources may still refer to **Material for MkDocs**. In most cases these references are interchangeable.
+
 
 ## Python Install
 
@@ -16,7 +24,7 @@ python --version
 Python 3.12.3
 
 pip --version
-pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
+pip 24.0
 ```
 
 !!! note
@@ -26,29 +34,29 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
 ![Python Installer](../assets/img/markdown/win-py-install.png)
 
-## MkDocs / Material for MkDocs Install
+## Zensical Install
 
-=== ":simple-materialformkdocs: **Material for MkDocs**"
+=== ":simple-materialformkdocs: **Zensical**"
 
-    ## Material for MkDocs
+    ## Zensical
     
     This will automatically install these dependencies: `MkDocs`, `Markdown`, `Pygments` and `Python Markdown Extensions`.
 
-    [Material for MkDocs Documentation](https://squidfunk.github.io/mkdocs-material/)
+    [Zensical Documentation](https://zensical.org/docs/get-started/#install-with-pip-windows)
 
     ```cmd title="Install"
-    pip install mkdocs-material
+    pip install zensical
 
     // Install a specific version
-    pip install mkdocs-material=="9.*"
+    pip install zensical=="9.*"
     ```
 
     ```cmd title="Check version"
-    pip show mkdocs-material
+    pip show zensical
     ```
 
     ```cmd title="Upgrade"
-    pip install --upgrade --force-reinstall mkdocs-material
+    pip install --upgrade --force-reinstall zensical
     ```
 
 === ":fontawesome-brands-markdown: **MkDocs**"
@@ -74,16 +82,16 @@ pip 24.0 from C:..user\Local\Programs\Python\Python312\Lib\site-packages\pip (py
 
 ## Creating a New Project
 
-Open command line and navigate to the location where the project will be stored. To create a new `MkDocs` project, run the following command from the command line.<br>
-Then use the `cd` command to change directories to the newly created `MkDocs` directory.
+Open command line and navigate to the location where the project will be stored. To create a new `Zensical` project, run the following command from the command line.<br>
+Then use the `cd` command to change directories to the newly created `Zensical` directory.
 
 ```cmd title="Windows cmd"
-mkdocs new my-project
+zensical new .
 cd my-project
 ```
 
 !!! tip
-    In the example above the new `MkDocs` project was called 'my-project' but any name can be used for the new project name.
+    In the example above the new `Zensical` project was called 'my-project' but any name can be used for the new project name.
 
 ## Python Virtual Environment
 
@@ -213,10 +221,10 @@ cd my-project
 
 ## Build Site
 
-Before deploying the `MkDocs` project to the web, you must first build the documentation.
+Before deploying the `Zensical` project to the web, you must first build the documentation.
 
 ```cmd title="Windows cmd"
-mkdocs build
+zensical build
 ```
 
 This will create a new directory in your project called `site`. To view the content of the directory.
