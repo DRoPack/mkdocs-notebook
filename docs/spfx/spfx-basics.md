@@ -89,6 +89,45 @@ Inside your project navigate to the config folder, then `server.json` file.  The
 
 ## Running Project
 
+??? failure "Troubleshooting"
+
+    If an SPFx project suddenly reports missing modules, dependency errors, or other unexpected build issues, the local package installation may be corrupt.
+
+    !!! note
+
+        For legacy SPFx projects, verify you are using the correct Node.js version before reinstalling packages. For example, SPFx 1.4.1 requires Node.js 8.x.
+
+    Before proceeding:
+
+    - Close VS Code.
+    - Open a new **Git Bash** terminal.
+    - Verify the project is using the correct Node.js version.
+
+    ```bash title="Verify Node Version"
+    node -v
+    npm -v
+    ```
+
+    ```bash title="Remove Node Modules"
+    rm -rf node_modules
+    ```
+
+    ```bash title="Remove Package Lock File"
+    rm -f package-lock.json
+    ```
+
+    ```bash title="Clear NPM Cache"
+    npm cache clean --force
+    ```
+
+    ```bash title="Reinstall Packages"
+    npm install --no-audit
+    ```
+
+    ```bash title="Start Local Workbench"
+    gulp serve
+    ```
+
 Preview and test the client-side web part in the SharePoint hosted workbench
 
 ```cmd title="Run Project"
