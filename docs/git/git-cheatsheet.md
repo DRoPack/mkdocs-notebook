@@ -100,24 +100,133 @@ git stash show -p stash@{2}            # Show a detailed diff of changes in a sp
 
 ## Branching
 
-```sh
+!!! tip "Most Common Workflow"
+    Create feature branch → commit changes → push feature branch → switch to main/master → pull latest → merge feature branch → push main/master → delete branch.
 
-git branch                              # List all branches in the repository
-git branch <branch-name>                # Create a new branch
+```sh title="Inspect Branches"
+git branch                           # List local branches
+git branch -a                        # List local and remote branches
 
-git switch <branch-name>                # Switch to an existing branch
-git switch -c <branch-name>             # Create a new branch and switch to it
+git status                           # Show current branch and working tree status
+```
+```sh title="Create and Switch Branches"
+git switch -c feature/my-change      # Create and switch to a new branch
 
-git branch -d <branch-name>             # Delete a branch (if it's fully merged)
-git branch -D <branch-name>             # Force delete a branch (even if it's not merged)
+git switch <branch-name>             # Switch to an existing branch
+```
+```sh title="Commit Changes on Feature Branch"
+git status                           # Verify changed files
 
-git merge <branch-name>                 # Merge a branch into the current branch
-git rebase <branch-name>                # Rebase the current branch onto another branch
+git add .                            # Stage all changes
+git commit -m "Chore: Description"   # Commit using preferred prefix style
+```
+```sh title="Push Feature Branch"
+git push -u origin feature/my-change # First push; creates upstream tracking
 
-git pull origin <branch-name>           # Pull changes from a specific branch on the remote
-git push origin <branch-name>           # Push the branch to the remote repository
-git push origin --delete <branch-name>  # Delete a branch from the remote repository
+git push                             # Push future commits to the same branch
+```
+```sh title="Merge Feature Branch into Main or Master"
+# IMPORTANT:
+# You merge INTO the branch you are currently on.
+# Switch to main/master first, then merge the feature branch.
 
+git switch main                      # Or use: git switch master
+git pull                             # Get latest changes from remote
+
+git merge feature/my-change          # Merge feature branch into current branch
+
+git push                             # Push updated main/master to remote
+```
+
+??? success "Merge Message - Fast-Forward"
+
+    If Git displays:
+
+    ```text
+    Fast-forward
+    ```
+
+    this is normal.
+
+    It means no new commits were made on `main` since the feature branch was created, so Git simply moved the `main` pointer forward to the latest commit.
+
+    No merge conflict occurred and no merge commit was required.
+
+??? failure "Merge Message - Conflicts"
+    
+    If Git cannot automatically merge changes, you'll see a message similar to:
+
+    ```text
+    CONFLICT (content): Merge conflict in filename
+    Automatic merge failed; fix conflicts and then commit the result.
+    ```
+
+    You are still on the branch where the merge was initiated
+    (typically `main`).
+
+    Steps:
+
+    1. Open the conflicted file.
+    2. Locate the conflict markers:
+
+        ```text
+        <<<<<<< HEAD
+        Current branch content
+        =======
+        Incoming branch content
+        >>>>>>> feature/my-branch
+        ```
+
+    3. Keep the desired code.
+    4. Remove the conflict markers.
+    5. Save the file.
+    6. Stage the resolved file:
+
+        ```bash
+        git add filename
+        ```
+
+    7. Complete the merge:
+
+        ```bash
+        git commit
+        ```
+    No additional `git merge` command is required.
+
+
+```sh title="Verify Merge"
+git status                           # Confirm branch is up to date and clean
+
+git log --oneline                    # Confirm recent commits are present
+```
+
+```sh title="Delete Branches After Merge"
+git branch -d feature/my-change      # Delete local branch if Git confirms it is merged
+
+git branch -D feature/my-change      # Force delete local branch after verifying merge
+
+git push origin --delete feature/my-change  # Delete remote branch from GitHub
+```
+
+??? warning "When git branch -d refuses to delete"
+    Sometimes Git refuses to delete a local branch even after it was merged into main/master.
+    This can happen when Git is comparing the local branch to the remote feature branch instead of main/master.
+
+    If all of the following are true:
+
+    1. The feature branch was merged into main/master.
+    2. main/master was pushed to GitHub.
+    3. GitHub shows the expected commits.
+    4. git status shows a clean working tree.
+
+```sh title="Troubleshooting"
+git diff                             # View unstaged changes
+
+git diff -- <file-path>              # View changes for a specific file
+
+git restore <file>                   # Discard local changes to a file
+
+git log --oneline --graph --all      # Visualize branch history
 ```
 
 ## Reset Local
