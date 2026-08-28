@@ -177,6 +177,7 @@ nav:
       - Raspberry Pi:
           - "raspberrypi/index.md"
           - Putty SSH: "raspberrypi/putty-ssh.md"
+          - VS Code Remote SSH: "raspberrypi/vscode-remote-ssh.md"
           - Webserver Setup: "raspberrypi/rpi-webserver-setup.md"
           - Deploy site: "raspberrypi/rpi-deploy-site.md"
 

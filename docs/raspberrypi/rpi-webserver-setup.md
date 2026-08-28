@@ -178,6 +178,8 @@ sudo systemctl status ssh --no-pager -l
 
 ### Connect with Better Tooling
 
+For full connection and troubleshooting steps, see [vscode-remote-ssh.md](vscode-remote-ssh.md).
+
 - VS Code: install Remote - SSH and connect to `user@<pi-ip>`.
 - WinSCP: use SFTP to browse and edit files under `/var/www/...`.
 
