@@ -109,6 +109,80 @@ server {
   - Cause: some DietPi installs use Dropbear, which can affect default SFTP/SCP behavior from Windows clients.
   - Fix: use `scp -O` (legacy mode) or PuTTY `pscp -scp`.
 
+## Better File Editing Workflow (OpenSSH + VS Code)
+
+If large edits in Nano or heredocs are slowing you down, a better long-term workflow is:
+
+- Edit directly on the Pi with VS Code Remote - SSH.
+- Or use WinSCP GUI editor for drag/drop plus quick edits.
+- Keep Nano for emergency edits only.
+
+### Check Which SSH Service Is Running
+
+```bash
+systemctl status dropbear --no-pager
+systemctl status ssh --no-pager
+ps aux | grep -E 'dropbear|sshd' | grep -v grep
+```
+
+If `dropbear` is active and `ssh` is missing/inactive, you are still on Dropbear.
+
+### Migrate from Dropbear to OpenSSH
+
+Keep your current PuTTY session open while doing this.
+
+```bash
+sudo apt update
+sudo apt install -y openssh-server
+sudo systemctl enable --now ssh
+sudo systemctl status ssh --no-pager -l
+```
+
+If `ssh.service` fails to start, Dropbear is usually still bound to port `22`.
+
+```bash
+sudo ss -tulpn | grep ':22'
+sudo systemctl stop dropbear
+sudo systemctl start ssh
+sudo systemctl status ssh --no-pager -l
+sudo ss -tulpn | grep ':22'
+```
+
+If OpenSSH is active, make the change permanent:
+
+```bash
+sudo systemctl enable ssh
+sudo systemctl disable --now dropbear
+```
+
+Open a second SSH window and verify login works before closing your original session.
+
+### If New SSH Login Says "Access Denied"
+
+OpenSSH commonly blocks root/password login by default.
+
+```bash
+sudo tee /etc/ssh/sshd_config.d/99-local-login.conf > /dev/null <<'EOF'
+PermitRootLogin yes
+PasswordAuthentication yes
+KbdInteractiveAuthentication no
+EOF
+
+sudo systemctl restart ssh
+sudo systemctl status ssh --no-pager -l
+```
+
+!!! warning "Security note"
+    Enabling root password login is convenient but less secure.
+    Prefer a normal user with SSH keys when possible.
+
+### Connect with Better Tooling
+
+- VS Code: install Remote - SSH and connect to `user@<pi-ip>`.
+- WinSCP: use SFTP to browse and edit files under `/var/www/...`.
+
+This removes most copy/paste and heredoc friction for large file edits.
+
 ## Verification Checks
 
 === "Pi (SSH)"
