@@ -26,7 +26,7 @@ Install method via Drag and Drop
 
 Install `oh-my-posh` on windows using `winget`
 
-!!! pied-piper ""
+!!! tip ""
 
     === "Search"
 
@@ -53,7 +53,7 @@ Install `oh-my-posh` on windows using `winget`
 
 Install `Clink` on Windows using `winget`. Clink is used due to no out-of-th-box support for Windows CMD for custom prompts.
 
-!!! pied-piper ""
+!!! tip ""
     === "Search"
 
         Search for `Clink` package on `winget`. Use the package `Id` in the install command. 
@@ -80,7 +80,7 @@ Setup for PowerShell terminal requires a change to your `$PROFILE`
 
 1. Locating your Profile and view file contents
 
-    !!! pied-piper ""
+    !!! tip ""
 
         === "Locate File"
 
@@ -154,7 +154,7 @@ Final configuration should look similar to this:
 
     Remember to update font preferences in each `Windows Terminal` profile to use the Nerd Font
 
-??? pied-piper "Custom Themes"
+??? tip "Custom Themes"
 
     === "Custom kushal theme"
 

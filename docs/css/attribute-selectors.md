@@ -2,7 +2,7 @@
 
 ## Exact Match (=)
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements with an attribute value exactly matching the specified value.
 
@@ -25,7 +25,7 @@
 
 ## Contains (*=)
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements with an attribute value containing the specified substring.
 
@@ -50,7 +50,7 @@
 
 ## Ends With ($=)
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements with an attribute value ending with the specified substring.
 
@@ -73,7 +73,7 @@
 
 ## Contains Word (~=)
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements with an attribute value containing the specified word (space-separated).
 
@@ -97,7 +97,7 @@
 
 ## Attribute Exists
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements that have the specified attribute, regardless of its value.
 
@@ -120,7 +120,7 @@
 
 ## Override Inline Styles
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets elements with inline styles, useful for overriding them.
 

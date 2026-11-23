@@ -4,7 +4,7 @@ Template to be used for all CSS pages to provide a clean consistent look.
 
 ## Name of the CSS class
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Description of what the CSS does
 

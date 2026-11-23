@@ -2,7 +2,7 @@
 
 ## Parent Selector
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Targets a parent element if child or descendant element matching a condition.
 

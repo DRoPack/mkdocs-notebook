@@ -2,7 +2,7 @@
 
 ## Adjacent Sibling +
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline:  Elements share the same parent
 
@@ -34,7 +34,7 @@
 
 ## General Sibling ~
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Elements share the same parent
 
@@ -64,7 +64,7 @@
 
 ## Child >
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Second element is a direct child of the first element
 
@@ -94,7 +94,7 @@
 
 ## Descendant
 
-!!! pied-piper "Definition"
+!!! tip "Definition"
 
     :material-checkbox-marked-circle-outline: Second element is a descendant of the first element
 
