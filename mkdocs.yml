@@ -47,6 +47,8 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.quotes:
+      callouts: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.arithmatex:
@@ -75,7 +77,6 @@ extra_javascript:
 
 extra_css:
   - /mkdocs-notebook/assets/css/custom_toc.css
-  - /mkdocs-notebook/assets/css/http-admonitions.css
   - /mkdocs-notebook/assets/css/custom_fences.css
   - /mkdocs-notebook/assets/css/extra.css
 
@@ -161,6 +162,28 @@ nav:
           - PnP-PowerShell:
               - "powershell/pnp-powershell/index.md"
               - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
+
+      - SQL:
+          - "sql/index.md"
+
+          - Fundamentals:
+              - Designing and Creating Tables: "sql/designing-creating-tables.md"
+              - Retrieving Data from a Single Table: "sql/retrieving-data-single-table.md"
+              - Retrieving Data from Multiple Tables: "sql/retrieving-data-multiple-tables.md"
+              - Inserting, Updating, Deleting Data: "sql/inserting-updating-deleting-data.md"
+
+          - Querying & Analysis:
+              - Summarizing Data: "sql/summarizing-data.md"
+              - Complex Queries: "sql/complex-queries.md"
+              - Essential MySQL Functions: "sql/essential-mysql-functions.md"
+
+          - Database Objects:
+              - Views: "sql/views.md"
+              - Stored Procedures: "sql/stored-procedures.md"
+              - Triggers: "sql/triggers.md"
+
+          - Reference:
+              - Exploring Schemas and Tables: "sql/exploring-schemas-tables.md"
 
       - Terminal:
           - "terminal/index.md"
