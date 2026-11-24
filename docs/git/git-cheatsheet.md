@@ -11,6 +11,7 @@ git clone https://github/repo           # Clone repo from GitHub to local machin
 git add . || git add fileName.txt       # Add to staging, multiple files just add a space between files
 git commit -m "Fixed bug…"              # Commit changes
 git commit --amend                      # Amend commit message prior to push
+git commit --amend --no-edit            # Add forgotten file(s) to last commit
 git push                                # Push changes to GitHub
 git pull --rebase                       # Update local with GitHub code
 
