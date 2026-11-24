@@ -4,7 +4,7 @@
 
 - :material-application-array-outline: [**Arrays**][arrays]
 - :material-function-variant: [**Expressions**][expressions]
-- :simple-ShareX: [**Microsoft Graph**][ms-graph]
+- :material-graph: [**Microsoft Graph**][ms-graph]
 
 </div>
 
