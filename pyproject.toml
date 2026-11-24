@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-blotter-custom-fences"
+version = "1.0.0"
+description = "Custom Markdown fences for the Code Blotter docs site"
+
+[tool.setuptools]
+packages = ["custom_fences"]
