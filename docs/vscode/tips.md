@@ -15,6 +15,7 @@
 | **`Shift + Alt + F`** | Format Current File |
 | **`Ctrl + ` ` (backtick)** | Toggle Terminal |
 | **`Ctrl + Shift + F`** | Find Across Files |
+| **`Ctrl + Alt + F`** | **Filter Explorer**. With the Explorer focused, open the find widget. Click the funnel icon to filter the tree instead of highlighting matches. |
 | **`F12`** | Go to Definition |
 | **`Alt + F12`** | Peek Definition |
 | **`Ctrl + Shift + M`** | Show Problems Panel |
