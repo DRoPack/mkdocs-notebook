@@ -244,6 +244,37 @@ git reflog                             # Show history of HEAD movements (useful 
 git reset --hard <commit-hash>         # Restore to a previous commit found in reflog
 ```
 
+## Reword an Older Unpushed Commit
+
+Use when the commit to fix is not the latest one (`--amend` only changes HEAD). Only safe **before** pushing, because the rebase rewrites the commit hashes.
+
+```sh
+git status                 # Working tree must be clean (git stash if it isn't)
+git log --oneline -5       # Find the target commit and count how far back it is
+
+git rebase -i HEAD~N       # N = target's position + 1 (target is HEAD~1 -> use HEAD~2)
+# 1. In the todo list, change 'pick' to 'reword' (or 'r') on the target line ONLY
+# 2. Save and close
+# 3. Edit the message in the second editor, save and close
+
+git log --oneline -5       # Verify the new message
+git stash pop              # Restore stashed changes (only if you used git stash)
+
+git rebase --abort         # Bail out mid-rebase and restore everything as it was
+```
+
+| Target commit | Command |
+|---|---|
+| Latest commit (HEAD) | `git commit --amend` |
+| One back (HEAD~1) | `git rebase -i HEAD~2` |
+| Two back (HEAD~2) | `git rebase -i HEAD~3` |
+
+**Notes**
+
+- The todo list shows the **oldest commit first**, which is the reverse of `git log`.
+- Commits after the reworded one get new hashes. Their content and messages stay the same.
+- If the pushed commit needs fixing, don't rebase. Use `git revert <hash>`.
+
 ## Staging Exclude Folder/File
 
 ```sh
