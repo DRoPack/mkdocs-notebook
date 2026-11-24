@@ -118,25 +118,22 @@ nav:
           - Subscription: "azure/subscription/index.md"
           - App Services: "azure/app-services/index.md"
 
-      - Microsoft:
-          - "microsoft/index.md"
-
+      - SharePoint:
+          - "microsoft/sharepoint/index.md"
+          - Web Parts: "microsoft/sharepoint/webparts.md"
+          - Query Parameters: "microsoft/sharepoint/query-parameters.md"
+          - Administration:
+              - "microsoft/sharepoint/administration/index.md"
+              - Patching: "microsoft/sharepoint/administration/patching.md"
           - Rest API:
               - "microsoft/rest-api/index.md"
               - Rest API: "microsoft/rest-api/rest-api.md"
 
-          - SharePoint:
-              - "microsoft/sharepoint/index.md"
-
-              - Administration:
-                  - "microsoft/sharepoint/administration/index.md"
-                  - Patching: "microsoft/sharepoint/administration/patching.md"
-
-              - Web Parts: "microsoft/sharepoint/webparts.md"
-              - Query Parameters: "microsoft/sharepoint/query-parameters.md"
-
-          - Power Automate:
-              - "microsoft/power-automate/index.md"
+      - Power Automate:
+          - "microsoft/power-automate/index.md"
+          - Arrays: "microsoft/power-automate/arrays.md"
+          - Expressions: "microsoft/power-automate/expressions.md"
+          - MS Graph: "microsoft/power-automate/ms-graph.md"
 
       - M365 Central Admin:
           - "central-admin/index.md"
@@ -159,9 +156,9 @@ nav:
       - PowerShell:
           - "powershell/index.md"
 
-          - PnP-PowerShell:
-              - "powershell/pnp-powershell/index.md"
-              - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
+      - PnP-PowerShell:
+          - "powershell/pnp-powershell/index.md"
+          - PnP-SharePoint Template: "powershell/pnp-powershell/pnp-sharepoint-template.md"
 
       - SQL:
           - "sql/index.md"
@@ -206,7 +203,6 @@ nav:
 
   - Courses:
       - "courses/index.md"
-
       - MOSH AI:
           - "courses/mosh-ai/index.md"
           - Section 1: "courses/mosh-ai/section1.md"
