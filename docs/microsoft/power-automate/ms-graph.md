@@ -153,3 +153,8 @@ Using `setProperty()` allows Power Automate to correctly handle quotes and other
 - Some Graph resources require an `If-Match` header containing the current `@odata.etag` before they can be updated.
 - Use `setProperty()` when constructing JSON containing dynamic HTML or other complex string values.
 - Test the Graph request in **Microsoft Graph Explorer** when troubleshooting permissions, payloads, or API behavior.
+
+## Reference
+
+- [Microsoft | HTTP with Entra ID (preauthorized)](https://learn.microsoft.com/en-us/connectors/webcontents/)
+- [Microsoft | HTTP with Entra ID](https://learn.microsoft.com/en-us/connectors/webcontentsv2/)
